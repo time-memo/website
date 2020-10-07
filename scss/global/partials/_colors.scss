@@ -1,0 +1,86 @@
+/*doc
+---
+title: Colors
+name: 01-colours
+category: Base
+---
+
+Do not name the colors by their usage.
+Name them by their mood, meaning or so. Usage of color can change but name should be persistent.
+Also same color can be used across components and pages so the naming has to be still correct.
+
+
+<h3>Brand Colors</h3>
+
+<div class="row text-center">
+	<div class="col-xs-6 col-sm-4 col-lg-3">
+		<div class="docs__color-box color-brand-primary"></div>
+		<p>
+			<code>.color-brand-primary</code>
+		</p>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-lg-3">
+		<div class="docs__color-box color-brand-secondary"></div>
+		<p>
+			<code>.color-brand-secondary</code>
+		</p>
+	</div>
+</div>
+
+<h3>System Colors</h3>
+
+<div class="row text-center">
+	<div class="col-xs-6 col-sm-4 col-lg-3">
+		<div class="docs__color-box color-system-success"></div>
+		<p>
+			<code>.color-system-success</code>
+		</p>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-lg-3">
+		<div class="docs__color-box color-system-warning"></div>
+		<p>
+			<code>.color-system-warning</code>
+		</p>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-lg-3">
+		<div class="docs__color-box color-system-info"></div>
+		<p>
+			<code>.color-system-info</code>
+		</p>
+	</div>
+	<div class="col-xs-6 col-sm-4 col-lg-3">
+		<div class="docs__color-box color-system-danger"></div>
+		<p>
+			<code>.color-system-danger</code>
+		</p>
+	</div>
+</div>
+*/
+
+.color-brand-primary {
+  background-color: theme-color('primary');
+}
+
+.color-brand-secondary {
+  background-color: theme-color('secondary');
+}
+
+.color-system-success {
+  background-color: theme-color('success');
+}
+
+.color-system-warning {
+  background-color: theme-color('warning');
+}
+
+.color-system-info {
+  background-color: theme-color('info');
+}
+
+.color-system-danger {
+  background-color: theme-color('danger');
+}
+
+.color-system-error {
+  background-color: theme-color('error');
+}

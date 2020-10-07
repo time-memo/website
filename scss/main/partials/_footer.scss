@@ -1,0 +1,20 @@
+/*doc
+---
+title: Footer
+name: 01-footer
+category: Components
+---
+
+Footer is great for mentioning authors or other useful information that are not so important as the content itself.
+
+```html_example
+<div class="footer">this is my footer</div>
+```
+ */
+
+.footer {
+  background: $gray-100;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}

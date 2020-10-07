@@ -1,0 +1,16 @@
+@import '../../node_modules/bootstrap/scss/functions';
+
+$theme-colors: (
+        primary: #326b9d,
+        secondary: #3899db,
+);
+
+$pixelratio-1x: 96dpi;
+$pixelratio-2x: 192dpi;
+
+$breadcrumb-divider: quote('>');
+
+$header-height: 4.188rem;
+$header-height-md: 4.188rem;
+
+@import '../../node_modules/bootstrap/scss/variables';
