@@ -22,7 +22,8 @@ navigation is great for mentioning authors or other useful information that are 
   right: 0;
   top: 0;
   z-index: 100;
-&--fixed {
+  
+  &--fixed {
     position: fixed;
   }
 }
