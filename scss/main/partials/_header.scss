@@ -15,15 +15,15 @@ navigation is great for mentioning authors or other useful information that are 
  */
 
 .header {
-  background-color: #ffffff;
+  background-color: theme-color(white);
   border-bottom: .0625rem solid $gray-500;
   color: theme-color(primary);
+  column-count: 2;
+  display: inline-block;
   left: 0;
   right: 0;
   top: 0;
   z-index: 100;
-  display: inline-block;
-  column-count: 2;
 
   &--fixed {
     position: fixed;
