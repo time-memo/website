@@ -22,7 +22,7 @@ Main menu in page header. Horizontal view
   list-style-type: none;
 
   &__item {
-    background-color: color-theme(white);
+    background-color: theme-color(basic);
     border-radius: 10%;
     display: inline-grid;
     line-height: 3rem;
@@ -31,16 +31,16 @@ Main menu in page header. Horizontal view
     width: 6rem;
 
     :hover {
-      background-color: color-theme(hover);
+      background-color: theme-color(hover);
       border-radius: 10%;
     }
 
     &--selected {
-      background-color: color-theme(hover);
+      background-color: theme-color(hover);
         }
     }
 
   &--fixed {
     position: fixed;
-  }  
+}  
 }
