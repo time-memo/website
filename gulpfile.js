@@ -55,7 +55,8 @@ const htmlmin = () => {
 
 	return stream.pipe(gulpHtmlmin({
 		collapseWhitespace: true,
-	})).pipe(gulp.dest('www'));
+	})).pipe(gulp.dest('www'))
+		.pipe(browserSync.stream());
 };
 
 // Documentation
