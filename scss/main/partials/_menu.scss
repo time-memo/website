@@ -8,8 +8,40 @@ category: Components
 Main menu in page header. Horizontal view
 
 ```html_example
-
+<ul class="menu">
+  <li class="menu__item menu__item--selected"><a href="#">position1</a></li>
+  <li class="menu__item"><a href="#">position2</a></li>
+  <li class="menu__item"><a href="#">position3</a></li>
+  <li class="menu__item"><a href="#">position4</a></li>
+</ul>
 ```
  */
 
- 
+.menu {
+  border-bottom: .0625rem solid $gray-500;
+  list-style-type: none;
+
+  
+  &__item{
+    display: inline-grid;
+    width: 6rem;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 10%;
+    background-color: #ffffff;
+    margin-left: 2rem;
+
+    :hover{
+        background-color: #ecf0f1;
+        border-radius: 10%;
+    }
+    
+    &--selected{
+        background-color: #ecf0f1
+
+        }
+    }
+  &--fixed{
+      position: fixed;
+  }  
+}
