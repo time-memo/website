@@ -2,4 +2,4 @@ version: '1'
 
 thresholds:
     error: 5
-    total: 15
+    total: 10
