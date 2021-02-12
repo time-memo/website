@@ -21,17 +21,15 @@ Main menu in page header. Horizontal view
   list-style-type: none;
   margin: 0;
   padding: 0;
-  
 
   &__item {
-    border-bottom: .0625rem solid $gray-500;
     background-color: theme-color(basic);
+    border-bottom: .0625rem solid $gray-500;
     border-radius: .2rem;
     display: block;
     padding: .5rem 1rem;
     position: sticky;
-    
-   
+
     :hover {
       background-color: theme-color(hover);
       border-radius: .2rem;
