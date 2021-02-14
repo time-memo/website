@@ -5,6 +5,14 @@ name: 03-horizontal menu
 category: Components
 ---
 
+### Menu Toggler
+
+```html_example
+<a class="menu__toggler" href="#">
+  <span class="toggler__icon"></span>
+</a>
+```
+
 Main menu in page header. Horizontal view
 
 ```html_example
@@ -15,6 +23,19 @@ Main menu in page header. Horizontal view
   <li class="menu__item"><a href="#">position4</a></li>
 </ul>
 ```
+
+### Horizontal
+Main menu in page header. It is still vertical on mobile.
+
+```html_example
+<ul class="menu menu--horizontal">
+    <li class="menu__item menu__item--primary"><a href="#">Get started</a></li>
+    <li class="menu__item"><a href="#">Platforms</a></li>
+    <li class="menu__item"><a href="#">Principle</a></li>
+    <li class="menu__item"><a href="#">Features</a></li>
+</ul>
+```
+
  */
 
 .menu {
@@ -23,7 +44,21 @@ Main menu in page header. Horizontal view
   padding: 0;
 
   &__item {
-    background-color: theme-color(basic);
+    color: theme-color('primary');
+    font-size: 1rem;
+
+    a {
+      display: block;
+      padding: .5rem 1rem;
+
+      &:hover,
+      &:focus {
+        background: $gray-100;
+        text-decoration: none;
+      }
+    }
+
+    /*background-color: theme-color(basic);
     border-bottom: .0625rem solid $gray-500;
     border-radius: .2rem;
     display: block;
@@ -37,11 +72,67 @@ Main menu in page header. Horizontal view
 
     &--selected {
       background-color: theme-color(hover);
+    }*/
+  }
+
+  &--horizontal {
+    .menu__item {
+      @include media-breakpoint-up(md) {
+        display: inline-block;
+      }
     }
   }
 
-  &--fixed {
-    position: fixed;
+  &__toggler {
+    border: 1px solid $navbar-light-toggler-border-color;
+    color: $navbar-light-color;
+    font-size: $navbar-toggler-font-size;
+    line-height: 1;
+    margin: .68rem 1rem;
+    padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+
+    @include border-radius($navbar-toggler-border-radius);
+
+    @include hover-focus {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &--active {
+      background: $navbar-light-toggler-border-color;
+    }
+
+    &--sticked {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
+
+  &__collapse {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      flex-basis: auto;
+      display: flex;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+
+  /*&--fixed {
+    position: fixed;
+  }*/
 }
 
+.toggler__icon {
+  background: $navbar-light-toggler-icon-bg no-repeat center center;
+  background-size: 100% 100%;
+  content: '';
+  display: inline-block;
+  height: 1.5em;
+  vertical-align: middle;
+  width: 1.5em;
+}
