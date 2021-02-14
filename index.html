@@ -14,70 +14,81 @@
 </head>
 <body>
     <div class="header header--fixed">
-        <div> 
-           <h1>Website portfolio</h1>
-       </div>
-       <div>
-            <ul class= "menu--fixed">
-                <li class="menu__item"><a href="#home">Home</a></li>
-                <li class="menu__item"><a href="#my_work">My work</a></li>
-                <li class="menu__item"><a href="#about_me">About me</a></li>
-                <li class="menu__item"><a href="#contact_me">Contact me</a></li>
-            </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6"> 
+                    <h1>Website portfolio</h1>
+                    <a class="menu__toggler menu__toggler--sticked d-md-none" id="main-menu-toggler" href="#" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler__icon"></span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="menu__collapse" id="main-menu">
+                        <ul class= "menu menu--horizontal">
+                            <li class="menu__item"><a href="#home">Home</a></li>
+                            <li class="menu__item"><a href="#my_work">My work</a></li>
+                            <li class="menu__item"><a href="#about_me">About me</a></li>
+                            <li class="menu__item"><a href="#contact_me">Contact me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <p id="home">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla nec ante vel commodo. Phasellus
-        dapibus, sem ut consequat ornare, lacus felis tempor turpis, sit amet varius nunc purus id diam. Pellentesque
-        iaculis sagittis rutrum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        Nulla at nunc purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus nulla vitae enim
-        blandit, sed ultrices libero molestie. Vestibulum feugiat erat nec mollis tincidunt. Donec vitae varius lacus. In
-        facilisis porttitor diam, sit amet dapibus lacus faucibus eget. Ut congue, leo et venenatis facilisis, purus tellus
-        porta massa, vel blandit mi neque et lacus. Quisque tincidunt tincidunt varius. Sed ultrices turpis ac neque mollis,
-        eget tempus mi placerat. Integer ullamcorper vulputate ex, eget tincidunt sem.
-    </p>
-    <p id="my_work">
-        Sed congue placerat odio a interdum. Nunc id luctus lacus, eu gravida dui. Nullam consequat ac nisi vitae commodo.
-        Curabitur sed dignissim sem. Vestibulum in vehicula massa. Maecenas tempus metus odio, sit amet aliquam ipsum
-        scelerisque non. Etiam faucibus eleifend mi, eu mollis diam tincidunt ac. Mauris nec elit hendrerit, suscipit ex ac,
-        ultricies nibh. Aenean porta tortor ac massa euismod, id condimentum elit mollis. Phasellus dolor massa, cursus nec
-        lectus vel, facilisis vestibulum ex. Ut sollicitudin arcu in commodo hendrerit. Cras mattis ex vel risus ultrices,
-        id condimentum dolor sodales. Sed aliquam feugiat sem quis pellentesque. In dictum mi sed arcu commodo rutrum.
-        Suspendisse metus nulla, sollicitudin ultrices odio quis, ultricies fermentum nulla. Pellentesque eu consectetur
-        arcu, vitae interdum lorem.
-    </p>
-    <p id="about_me">
-        Curabitur aliquet odio sed felis ultrices hendrerit. Praesent erat erat, commodo at lectus vel, blandit ullamcorper
-        quam. Ut convallis ipsum tellus, et tempor augue efficitur ac. Fusce sollicitudin quis orci eu tincidunt. Maecenas
-        id pellentesque nibh. Ut at sollicitudin lacus. Morbi viverra elit ut ante elementum accumsan. Integer bibendum
-        ultrices hendrerit. Nullam rhoncus mi nec semper mollis. Nullam non interdum nunc. Nullam sagittis est in mauris
-        malesuada consectetur. Nam fringilla ante est, nec aliquam ante vestibulum et. Nunc porta erat ut ligula efficitur,
-        non viverra elit dignissim. Curabitur at risus ante. Nulla facilisi. Fusce tortor ex, cursus sed vulputate vel,
-        lacinia eu nunc.
-    </p>
-    <p id="contact_me">
-        Aenean at dictum tellus, elementum consectetur arcu. Integer viverra metus eleifend nisi vulputate, a varius felis
-        porta. Sed porta elit quis sapien faucibus molestie. Sed lobortis bibendum volutpat. Curabitur a dictum tellus.
-        Aliquam lobortis odio orci, non consectetur quam tincidunt non. Curabitur et scelerisque tortor, id porta dui.
-        Vivamus augue orci, vestibulum quis ex et, scelerisque gravida neque. Vivamus in tristique felis. Suspendisse
-        potenti. Integer consectetur diam gravida molestie hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus
-        et ultrices posuere cubilia curae; Quisque orci quam, consectetur vitae purus quis, auctor aliquam nibh. Curabitur
-        sit amet nisi nisl.
-    </p>
-    <p>
-        Vivamus sagittis lacinia convallis. Duis in tincidunt ex, quis fringilla velit. Proin id tempor sapien. Fusce
-        pellentesque pretium sem, sit amet rutrum augue finibus iaculis. Phasellus non bibendum enim. Phasellus lectus dui,
-        consectetur non mauris at, luctus congue ipsum. Praesent sollicitudin, velit non tristique aliquam, ligula eros
-        condimentum ex, a mattis elit enim eu massa. Donec nec posuere tellus. Nullam ut arcu orci. Suspendisse pharetra leo
-        quis ornare scelerisque. Fusce lacinia, quam ac suscipit accumsan, mi sem tincidunt magna, ut vestibulum velit
-        mauris eget leo. Donec eleifend sapien et purus semper, a vulputate risus tempus. Suspendisse nec nunc eu eros
-        pharetra suscipit vel quis lorem.
-    </p>
-
+    <div class="container">
+        <p id="home">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla nec ante vel commodo. Phasellus
+            dapibus, sem ut consequat ornare, lacus felis tempor turpis, sit amet varius nunc purus id diam. Pellentesque
+            iaculis sagittis rutrum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Nulla at nunc purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus nulla vitae enim
+            blandit, sed ultrices libero molestie. Vestibulum feugiat erat nec mollis tincidunt. Donec vitae varius lacus. In
+            facilisis porttitor diam, sit amet dapibus lacus faucibus eget. Ut congue, leo et venenatis facilisis, purus tellus
+            porta massa, vel blandit mi neque et lacus. Quisque tincidunt tincidunt varius. Sed ultrices turpis ac neque mollis,
+            eget tempus mi placerat. Integer ullamcorper vulputate ex, eget tincidunt sem.
+        </p>
+        <p id="my_work">
+            Sed congue placerat odio a interdum. Nunc id luctus lacus, eu gravida dui. Nullam consequat ac nisi vitae commodo.
+            Curabitur sed dignissim sem. Vestibulum in vehicula massa. Maecenas tempus metus odio, sit amet aliquam ipsum
+            scelerisque non. Etiam faucibus eleifend mi, eu mollis diam tincidunt ac. Mauris nec elit hendrerit, suscipit ex ac,
+            ultricies nibh. Aenean porta tortor ac massa euismod, id condimentum elit mollis. Phasellus dolor massa, cursus nec
+            lectus vel, facilisis vestibulum ex. Ut sollicitudin arcu in commodo hendrerit. Cras mattis ex vel risus ultrices,
+            id condimentum dolor sodales. Sed aliquam feugiat sem quis pellentesque. In dictum mi sed arcu commodo rutrum.
+            Suspendisse metus nulla, sollicitudin ultrices odio quis, ultricies fermentum nulla. Pellentesque eu consectetur
+            arcu, vitae interdum lorem.
+        </p>
+        <p id="about_me">
+            Curabitur aliquet odio sed felis ultrices hendrerit. Praesent erat erat, commodo at lectus vel, blandit ullamcorper
+            quam. Ut convallis ipsum tellus, et tempor augue efficitur ac. Fusce sollicitudin quis orci eu tincidunt. Maecenas
+            id pellentesque nibh. Ut at sollicitudin lacus. Morbi viverra elit ut ante elementum accumsan. Integer bibendum
+            ultrices hendrerit. Nullam rhoncus mi nec semper mollis. Nullam non interdum nunc. Nullam sagittis est in mauris
+            malesuada consectetur. Nam fringilla ante est, nec aliquam ante vestibulum et. Nunc porta erat ut ligula efficitur,
+            non viverra elit dignissim. Curabitur at risus ante. Nulla facilisi. Fusce tortor ex, cursus sed vulputate vel,
+            lacinia eu nunc.
+        </p>
+        <p id="contact_me">
+            Aenean at dictum tellus, elementum consectetur arcu. Integer viverra metus eleifend nisi vulputate, a varius felis
+            porta. Sed porta elit quis sapien faucibus molestie. Sed lobortis bibendum volutpat. Curabitur a dictum tellus.
+            Aliquam lobortis odio orci, non consectetur quam tincidunt non. Curabitur et scelerisque tortor, id porta dui.
+            Vivamus augue orci, vestibulum quis ex et, scelerisque gravida neque. Vivamus in tristique felis. Suspendisse
+            potenti. Integer consectetur diam gravida molestie hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus
+            et ultrices posuere cubilia curae; Quisque orci quam, consectetur vitae purus quis, auctor aliquam nibh. Curabitur
+            sit amet nisi nisl.
+        </p>
+        <p>
+            Vivamus sagittis lacinia convallis. Duis in tincidunt ex, quis fringilla velit. Proin id tempor sapien. Fusce
+            pellentesque pretium sem, sit amet rutrum augue finibus iaculis. Phasellus non bibendum enim. Phasellus lectus dui,
+            consectetur non mauris at, luctus congue ipsum. Praesent sollicitudin, velit non tristique aliquam, ligula eros
+            condimentum ex, a mattis elit enim eu massa. Donec nec posuere tellus. Nullam ut arcu orci. Suspendisse pharetra leo
+            quis ornare scelerisque. Fusce lacinia, quam ac suscipit accumsan, mi sem tincidunt magna, ut vestibulum velit
+            mauris eget leo. Donec eleifend sapien et purus semper, a vulputate risus tempus. Suspendisse nec nunc eu eros
+            pharetra suscipit vel quis lorem.
+        </p>
+    </div>
     <div class="footer">
         Jirka :)
     </div>
-
+    
+    <script src="../js/main-menu.js"></script>
     <% if (version === "@dev") { %>
     <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.js?v=2.24.4'><\/script>".replace("HOST", location.hostname));
