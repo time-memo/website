@@ -113,8 +113,8 @@ Main menu in page header. It is still vertical on mobile.
     display: none;
 
     @include media-breakpoint-up(md) {
-      flex-basis: auto;
       display: flex;
+      flex-basis: auto;
     }
 
     &.show {
