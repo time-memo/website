@@ -50,7 +50,7 @@ Main menu in page header. It is still vertical on mobile.
     a {
       border-radius: .3rem;
       display: block;
-      padding: 0.5rem 1rem;
+      padding: .5rem 1rem;
 
       &:hover,
       &:focus {
@@ -64,9 +64,9 @@ Main menu in page header. It is still vertical on mobile.
     .menu__item {
       @include media-breakpoint-up(md) {
         display: inline-block;
-        
+
         a {
-          padding: 1rem 1rem;
+          padding: 1rem;
         }
       }
     }
