@@ -27,5 +27,12 @@ navigation is great for mentioning authors or other useful information that are 
   &--fixed {
     position: fixed;
   }
+
+  &__spacer {
+    display: none;
+
+    @include media-breakpoint-up(lg)
+      display: inline-block;
+  }
 }
 
