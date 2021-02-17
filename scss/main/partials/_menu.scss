@@ -17,10 +17,10 @@ Main menu in page header. Horizontal view
 
 ```html_example
 <ul class="menu">
-  <li class="menu__item menu__item--selected"><a href="#">position1</a></li>
-  <li class="menu__item"><a href="#">position2</a></li>
-  <li class="menu__item"><a href="#">position3</a></li>
-  <li class="menu__item"><a href="#">position4</a></li>
+  <li class="menu__item"><a href="#">Home</a></li>
+  <li class="menu__item"><a href="#">My work</a></li>
+  <li class="menu__item"><a href="#">About me</a></li>
+  <li class="menu__item"><a href="#">Contact me</a></li>
 </ul>
 ```
 
@@ -29,10 +29,10 @@ Main menu in page header. It is still vertical on mobile.
 
 ```html_example
 <ul class="menu menu--horizontal">
-    <li class="menu__item menu__item--primary"><a href="#">Get started</a></li>
-    <li class="menu__item"><a href="#">Platforms</a></li>
-    <li class="menu__item"><a href="#">Principle</a></li>
-    <li class="menu__item"><a href="#">Features</a></li>
+  <li class="menu__item"><a href="#">Home</a></li>
+  <li class="menu__item"><a href="#">My work</a></li>
+  <li class="menu__item"><a href="#">About me</a></li>
+  <li class="menu__item"><a href="#">Contact me</a></li>
 </ul>
 ```
 
@@ -48,8 +48,9 @@ Main menu in page header. It is still vertical on mobile.
     font-size: 1rem;
 
     a {
+      border-radius: .3rem;
       display: block;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
 
       &:hover,
       &:focus {
@@ -57,28 +58,16 @@ Main menu in page header. It is still vertical on mobile.
         text-decoration: none;
       }
     }
-
-    /*background-color: theme-color(basic);
-    border-bottom: .0625rem solid $gray-500;
-    border-radius: .2rem;
-    display: block;
-    padding: .5rem 1rem;
-    position: sticky;
-
-    :hover {
-      background-color: theme-color(hover);
-      border-radius: .2rem;
-    }
-
-    &--selected {
-      background-color: theme-color(hover);
-    }*/
   }
 
   &--horizontal {
     .menu__item {
       @include media-breakpoint-up(md) {
         display: inline-block;
+        
+        a {
+          padding: 1rem 1rem;
+        }
       }
     }
   }
@@ -121,10 +110,6 @@ Main menu in page header. It is still vertical on mobile.
       display: block;
     }
   }
-
-  /*&--fixed {
-    position: fixed;
-  }*/
 }
 
 .toggler__icon {
