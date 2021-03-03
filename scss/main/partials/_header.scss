@@ -28,11 +28,11 @@ navigation is great for mentioning authors or other useful information that are 
     position: fixed;
   }
 
-  &__logo{
+  &__logo {
     display: flex;
     justify-content: center;
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       justify-content: start;
     }
   }
