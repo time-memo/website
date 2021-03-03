@@ -18,7 +18,7 @@ navigation is great for mentioning authors or other useful information that are 
   background-color: theme-color(basic);
   border-bottom: .0625rem solid $gray-500;
   color: theme-color(primary);
-  display: inline-block;
+  display: flex;
   left: 0;
   right: 0;
   top: 0;
@@ -26,5 +26,14 @@ navigation is great for mentioning authors or other useful information that are 
 
   &--fixed {
     position: fixed;
+  }
+
+  &__logo{
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-up(md){
+      justify-content: start;
+    }
   }
 }
