@@ -29,11 +29,12 @@ navigation is great for mentioning authors or other useful information that are 
   }
 
   &__logo {
-    display: flex;
-    justify-content: center;
+    display: block;
+    margin: auto;
+    width: 138px;
 
     @include media-breakpoint-up(md) {
-      justify-content: start;
+      margin: 0;
     }
   }
 }
