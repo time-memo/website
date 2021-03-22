@@ -12,6 +12,7 @@ const gulpHtmlmin = require('gulp-htmlmin');
 const yargs = require('yargs');
 const browserSync = require('browser-sync').create();
 const template = require('gulp-template');
+const zip = require('gulp-zip');
 
 let port = 8000;
 let development = false;
@@ -92,10 +93,18 @@ const setDevelopmentEnvironment = (callback) => {
 	callback();
 };
 
+const buildZip = () => {
+	return gulp.src('production/build/**/*')
+		.pipe(zip('ticha-website.zip'))
+		.pipe(gulp.dest('production/release/'));
+};
+
+
 const production = gulp.series(gulp.parallel(css, htmlmin), hologram);
 
 const defaultTask = gulp.series(setDevelopmentEnvironment, production, gulp.parallel(watch, server));
 
 
+module.exports.package = buildZip;
 module.exports.production = production;
 module.exports.default = defaultTask;
