@@ -32,3 +32,9 @@ jobs:
 
       - name: Build
         run: make -C production/ package
+
+      - name: Store Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ticha-website # double zipping issue: https://github.com/actions/upload-artifact/issues/39
+          path: production/release/ticha-website.zip
