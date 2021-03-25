@@ -41,7 +41,7 @@ jobs:
 
       # Temporary fix for crashing S3 release
       - name: Fix AWS CLI # https://github.com/aws/aws-cli/issues/5262
-        run: sudo apt-get install python3-setuptools && python3 -m pip install --user awscli
+        run: aws --version && sudo apt-get install python3-setuptools && python3 -m pip install --user awscli && aws --version
 
       - name: Release
         run: make -C production/ release AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
