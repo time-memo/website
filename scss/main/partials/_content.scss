@@ -25,11 +25,12 @@ The basic variant has transparent background so you can use it with any parent c
     overflow: hidden;
     padding-bottom: 3rem;
     padding-top: 3rem;
+    background-color: red;
 
-    @include media-breakepoint-up(lg) {
-        padding-bottom: 5rem;
-        padding-top: 5rem;
-    }
+    // @include media-breakepoint-up(lg) {
+    //     padding-bottom: 5rem;
+    //     padding-top: 5rem;
+    // }
 
     // &__heading {
     //     font-size: 3rem;
