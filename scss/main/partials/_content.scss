@@ -1,0 +1,46 @@
+/*doc
+---
+title: Content
+name: 01-content
+category: Layout
+---
+
+You can use several variations of `.content` container.
+
+## Basic
+The basic variant has transparent background so you can use it with any parent component.
+
+```html_example
+<div class="color-brand-secondary">
+  <div class="content">
+      <div class="content__inner">
+          <h2 class="content__heading">How it works</h2>
+      </div>
+  </div>
+</div>
+```
+*/
+
+ .content {
+    overflow: hidden;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+
+    // @include media-breakepoint-up(lg) {
+    //     padding-bottom: 5rem;
+    //     padding-top: 5rem;
+    // }
+
+    // &__heading {
+    //     font-size: 3rem;
+    //     text-align: center;
+
+    //     &--background {
+    //         background-color: theme-color('primary');
+    //     }
+
+    //     &--background-light {
+    //         background-color: theme-color('secondary');
+    //     }
+    // }
+ }
