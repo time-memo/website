@@ -51,15 +51,3 @@ package: app
 	@(printf "${BG}Package version $(version) is ready${NC}")
 		echo $(version) >$(release)/latest.version
 
-.PHONY: release
-release:
-	@(printf "${BG}Upload package to S3 repository${NC}")
-		aws s3 cp $(release)/latest.version "s3://ticha-release/dev/ticha-website.version";
-		aws s3 cp $(release)/ticha-website.zip "s3://ticha-release/dev/ticha-website.zip";
-		aws s3 cp $(release)/ticha-website.zip "s3://ticha-release/dev/ticha-website-$(version).zip";
-
-		if [ `echo ${version} | egrep "^v[0-9]+(+\.[0-9]+){2}$$"` ]; then \
-			aws s3 cp $(release)/latest.version "s3://ticha-release/stable/ticha-website.version"; \
-			aws s3 cp $(release)/ticha-website.zip "s3://ticha-release/stable/ticha-website.zip"; \
-			aws s3 cp $(release)/ticha-website.zip "s3://ticha-release/stable/ticha-website-$(version).zip"; \
-		fi

@@ -38,9 +38,3 @@ jobs:
         with:
           name: ticha-website # double zipping issue: https://github.com/actions/upload-artifact/issues/39
           path: production/release/ticha-website.zip
-
-      - name: Release
-        run: make -C production/ release AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      # curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/YOURNAME/APPLICATION_NAME/actions/workflows/build.yaml/dispatches --data '{"ref": "master"}'
-
