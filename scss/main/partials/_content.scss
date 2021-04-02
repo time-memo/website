@@ -35,7 +35,7 @@ The basic variant has transparent background so you can use it with any parent c
     padding-top: $content-padding-lg;
   }
 
-  &--crooked {
+  &--beveled {
     overflow: visible;
     padding-bottom: $content-padding - 2rem;
     padding-top: $content-padding - 2rem;
@@ -88,7 +88,7 @@ The basic variant has transparent background so you can use it with any parent c
       background-image: linear-gradient(to left bottom, $color-white 0%, $color-white 50%, $almost-transparent 51%);
     }
 
-    &.content--crooked-reverse {
+    &.content--beveled-reverse {
       &::before {
         background-image: linear-gradient(to left top, $color-white 0%, $color-white 50%, $almost-transparent 51%);
       }
@@ -110,7 +110,7 @@ The basic variant has transparent background so you can use it with any parent c
       background-image: linear-gradient(to left bottom, $color-background 0%, $color-background 50%, $almost-transparent 51%);
     }
 
-    &.content--crooked-reverse {
+    &.content--beveled-reverse {
       &::before {
         background-image: linear-gradient(to left top, $color-background 0%, $color-background 50%, $almost-transparent 51%);
       }
@@ -133,7 +133,7 @@ The basic variant has transparent background so you can use it with any parent c
       background-image: linear-gradient(to left bottom, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
     }
 
-    &.content--crooked-reverse {
+    &.content--beveled-reverse {
       &::before {
         background-image: linear-gradient(to left top, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
       }
