@@ -143,4 +143,42 @@ The basic variant has transparent background so you can use it with any parent c
       }
     }
   }
+
+  &__inner {
+    @extend .container;
+  }
+
+  &__center {
+    align-self: center;
+  }
+
+  &__heading {
+    font-size: 2.125rem;
+    font-weight: 100;
+    margin-bottom: .6875rem;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 2.75rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 3.25rem;
+    }
+
+    &--small {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: $content-padding;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 2.25rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+        margin-bottom: $content-padding-lg;
+      }
+    }
+  }
 }
