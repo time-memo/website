@@ -1,3 +1,7 @@
+$content-padding: 4rem !default;
+$content-padding-lg: 6rem !default;
+$almost-transparent: rgba($color-white, .001) !default; // workaround for Safari's linear-gradient transparent bug
+
 /*doc
 ---
 title: Content
@@ -21,26 +25,160 @@ The basic variant has transparent background so you can use it with any parent c
 ```
 */
 
- .content {
-    overflow: hidden;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+.content {
+  overflow: hidden;
+  padding-bottom: $content-padding;
+  padding-top: $content-padding;
 
-    // @include media-breakepoint-up(lg) {
-    //     padding-bottom: 5rem;
-    //     padding-top: 5rem;
-    // }
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $content-padding-lg;
+    padding-top: $content-padding-lg;
+  }
 
-    // &__heading {
-    //     font-size: 3rem;
-    //     text-align: center;
+  &--beveled {
+    overflow: visible;
+    padding-bottom: $content-padding - 2rem;
+    padding-top: $content-padding - 2rem;
+    position: relative;
 
-    //     &--background {
-    //         background-color: theme-color('primary');
-    //     }
+    @include media-breakpoint-up(lg) {
+      padding-bottom: $content-padding-lg - 3rem;
+      padding-top: $content-padding-lg - 3rem;
+    }
 
-    //     &--background-light {
-    //         background-color: theme-color('secondary');
-    //     }
-    // }
- }
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      height: 2rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+
+      @include media-breakpoint-up(lg) {
+        height: 3rem;
+      }
+    }
+
+    &::before {
+      top: -2rem;
+
+      @include media-breakpoint-up(lg) {
+        top: -3rem;
+      }
+    }
+
+    &::after {
+      bottom: -2rem;
+
+      @include media-breakpoint-up(lg) {
+        bottom: -3rem;
+      }
+    }
+  }
+
+  &--light {
+    background: $color-white;
+
+    &::before {
+      background-image: linear-gradient(to right top, $color-white 0%, $color-white 50%, $almost-transparent 51%);
+    }
+
+    &::after {
+      background-image: linear-gradient(to left bottom, $color-white 0%, $color-white 50%, $almost-transparent 51%);
+    }
+
+    &.content--beveled-reverse {
+      &::before {
+        background-image: linear-gradient(to left top, $color-white 0%, $color-white 50%, $almost-transparent 51%);
+      }
+
+      &::after {
+        background-image: linear-gradient(to right bottom, $color-white 0%, $color-white 50%, $almost-transparent 51%);
+      }
+     }
+   }
+
+  &--bg {
+    background: $color-background;
+
+    &::before {
+      background-image: linear-gradient(to right top, $color-background 0%, $color-background 50%, $almost-transparent 51%);
+    }
+
+    &::after {
+      background-image: linear-gradient(to left bottom, $color-background 0%, $color-background 50%, $almost-transparent 51%);
+    }
+
+    &.content--beveled-reverse {
+      &::before {
+        background-image: linear-gradient(to left top, $color-background 0%, $color-background 50%, $almost-transparent 51%);
+      }
+
+      &::after {
+        background-image: linear-gradient(to right bottom, $color-background 0%, $color-background 50%, $almost-transparent 51%);
+      }
+    }
+  }
+
+  &--dark {
+    background: theme-color('primary');
+    color: $white;
+
+    &::before {
+      background-image: linear-gradient(to right top, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
+    }
+
+    &::after {
+      background-image: linear-gradient(to left bottom, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
+    }
+
+    &.content--beveled-reverse {
+      &::before {
+        background-image: linear-gradient(to left top, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
+      }
+
+      &::after {
+        background-image: linear-gradient(to right bottom, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
+      }
+    }
+  }
+
+  &__inner {
+    @extend .container;
+  }
+
+  &__center {
+    align-self: center;
+  }
+
+  &__heading {
+    font-size: 2.125rem;
+    font-weight: 100;
+    margin-bottom: .6875rem;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 2.75rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 3.25rem;
+    }
+
+    &--small {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: $content-padding;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 2.25rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+        margin-bottom: $content-padding-lg;
+      }
+    }
+  }
+}
