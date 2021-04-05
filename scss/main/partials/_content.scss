@@ -17,9 +17,26 @@ The basic variant has transparent background so you can use it with any parent c
 ```html_example
 <div class="color-brand-secondary">
   <div class="content">
-      <div class="content__inner">
-          <h2 class="content__heading">How it works</h2>
-      </div>
+    <div class="content__inner">
+        <div class="content__center">
+          <h2 class="content__heading">Name Surname</h2>
+        </div>
+    </div>
+  </div>
+</div>
+```
+
+## Bevelead
+The other variant with color backgroung which is used on the page.
+
+```html_example
+<div class="content content--bg content--beveled">
+  <div class="content__inner">
+    <p>
+        Sed congue placerat odio a interdum. Nunc id luctus lacus, eu gravida dui. Nullam consequat ac nisi vitae commodo.
+        Curabitur sed dignissim sem. Vestibulum in vehicula massa. Maecenas tempus metus odio, sit amet aliquam ipsum
+        scelerisque non.
+    </p>
   </div>
 </div>
 ```
