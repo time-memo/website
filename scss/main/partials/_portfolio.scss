@@ -27,7 +27,7 @@ navigation is great for mentioning authors or other useful information that are 
   text-align: center;
 
   &:hover {
-    img {  
+    img {
       -ms-transform: scale(1.2);
       -webkit-transform: scale(1.2);
       transform: scale(1.2);
@@ -38,7 +38,8 @@ navigation is great for mentioning authors or other useful information that are 
       opacity: 1;
     }
 
-    h2, a.info {
+    h2,
+    .info {
       filter: alpha(opacity = 100);
       opacity: 1;
       -ms-transform: translatey(0);
@@ -46,23 +47,23 @@ navigation is great for mentioning authors or other useful information that are 
       transform: translatey(0);
     }
 
-    a.info {
+    .info {
       -webkit-transition-delay: .2s;
       transition-delay: .2s;
     }
    }
 
   .overlay {
-    width: 100%;
+    background-color: rgba(0, 0, 0, .5); 
     height: 100%;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
     left: 0;
     opacity: 0;
-    background-color: rgba(0, 0, 0, .5);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
     -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out
+    transition: all .4s ease-in-out;
+    width: 100%;
   }
 
   img {
@@ -75,36 +76,36 @@ navigation is great for mentioning authors or other useful information that are 
   }
 
   h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 1.0625rem;
     background: rgba(0, 0, 0, .6);
-    -webkit-transform: translatey(-100px);
+    color: $color-white;
+    font-size: 1.0625rem;
+    padding: .625rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
     -ms-transform: translatey(-100px);
+    -webkit-transform: translatey(-100px);
     transform: translatey(-100px);
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    padding: .625rem;
   }
 
   .info {
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    border: .0625rem solid #fff;
     background-color: transparent;
-    opacity: 0;
+    border: .0625rem solid $color-white;
+    color: $color-white;
+    display: inline-block;
     filter: alpha(opacity = 0);
+    margin: 3.125rem 0 0;
+    opacity: 0;
+    padding: .4375rem .875rem;
+    text-decoration: none;
+    text-transform: uppercase;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    margin: 3.125 0 0;
-    padding: .4375rem .875rem;
-
+    
     &:hover {
-      box-shadow: 0 0 .3125rem #fff;
+      box-shadow: 0 0 .3125rem $color-white;
     }
   }
 }
