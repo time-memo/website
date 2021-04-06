@@ -54,7 +54,7 @@ navigation is great for mentioning authors or other useful information that are 
    }
 
   .overlay {
-    background-color: rgba(0, 0, 0, .5); 
+    background-color: rgba(0, 0, 0, .5);
     height: 100%;
     left: 0;
     opacity: 0;
@@ -103,7 +103,7 @@ navigation is great for mentioning authors or other useful information that are 
     text-transform: uppercase;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    
+
     &:hover {
       box-shadow: 0 0 .3125rem $color-white;
     }
