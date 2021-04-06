@@ -9,8 +9,7 @@ $theme-colors: (
 $color-black: #000;
 $color-background: lighten(theme-color('primary'), 50%);
 $color-white: #fff;
-$color-overlay-portfolio: rgba(0, 0, 0, .5);
-$color-h2-bckg-portfolio: rgba(0, 0, 0, .6);
+$color-portfolio: rgba(0, 0, 0, .6);
 
 
 $pixelratio-1x: 96dpi;
