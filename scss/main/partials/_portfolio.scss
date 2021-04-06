@@ -22,30 +22,30 @@ navigation is great for mentioning authors or other useful information that are 
   text-align: center;
 
   &:hover {
-     img {  
-        -ms-transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-     }
+    img {  
+      -ms-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+   }
 
-     .overlay {
-         filter: alpha(opacity = 00);  
-         opacity: 1;
-     }
+   .overlay {
+      filter: alpha(opacity = 00);  
+      opacity: 1;
+   }
 
-     h2, a.info {
-        filter: alpha(opacity = 100);
-        opacity: 1;
-        -ms-transform: translatey(0);
-        -webkit-transform: translatey(0);
-        transform: translatey(0);
-     }
+   h2, a.info {
+      filter: alpha(opacity = 100);
+      opacity: 1;
+      -ms-transform: translatey(0);
+      -webkit-transform: translatey(0);
+      transform: translatey(0);
+   }
 
-     a.info {
-        -webkit-transition-delay: .2s;
-        transition-delay: .2s;
-     }
-  }
+   a.info {
+      -webkit-transition-delay: .2s;
+      transition-delay: .2s;
+   }
+   }
 
   .overlay {
      width: 100%;
