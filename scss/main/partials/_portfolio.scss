@@ -8,7 +8,12 @@ category: Components
 navigation is great for mentioning authors or other useful information that are not so important as the content itself.
 
 ```html_example
-// to do example
+<ul class="menu menu--horizontal">
+  <li class="menu__item"><a href="#">Home</a></li>
+  <li class="menu__item"><a href="#">My work</a></li>
+  <li class="menu__item"><a href="#">About me</a></li>
+  <li class="menu__item"><a href="#">Contact me</a></li>
+</ul>
 
 ```
  */
@@ -22,11 +27,11 @@ navigation is great for mentioning authors or other useful information that are 
   text-align: center;
 
   &:hover {
-    img {  
-      -ms-transform: scale(1.2);
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2);
-   }
+      img {  
+         -ms-transform: scale(1.2);
+         -webkit-transform: scale(1.2);
+         transform: scale(1.2);
+      }
 
    .overlay {
       filter: alpha(opacity = 00);  
