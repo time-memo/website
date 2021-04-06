@@ -20,11 +20,15 @@ navigation is great for mentioning authors or other useful information that are 
 
 .hovereffect {
   cursor: default;
-  float: left;
-  margin-bottom: 1.5rem;
+  display: inline-block;
+  margin-bottom: .4rem;
   overflow: hidden;
   position: relative;
-  text-align: center;
+  text-align: left;
+
+  @include media-breakpoint-up(md) {
+     margin-bottom: 1.5rem;
+  }
 
   &:hover {
     img {
@@ -39,6 +43,7 @@ navigation is great for mentioning authors or other useful information that are 
     }
 
     h2,
+    h3,
     .info {
       filter: alpha(opacity = 100);
       opacity: 1;
@@ -54,7 +59,7 @@ navigation is great for mentioning authors or other useful information that are 
    }
 
   .overlay {
-    background-color: $color-overlay-portfolio;
+    background-color: $color-portfolio;
     height: 100%;
     left: 0;
     opacity: 0;
@@ -76,13 +81,12 @@ navigation is great for mentioning authors or other useful information that are 
   }
 
   h2 {
-    background: $color-h2-bckg-portfolio;
     color: $color-white;
-    font-size: 1.0625rem;
-    padding: .625rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding: 1.625rem .625rem 0 1.625rem;
     position: relative;
-    text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase;;
     -ms-transform: translatey(-100px);
     -webkit-transform: translatey(-100px);
     transform: translatey(-100px);
@@ -90,19 +94,42 @@ navigation is great for mentioning authors or other useful information that are 
     transition: all .2s ease-in-out;
   }
 
+  h3 {
+   color: $color-white;
+   font-size: 1.3rem;
+   font-weight: 100;
+   padding: 0 .625rem .625rem 1.625rem;
+   position: relative;
+   text-transform: uppercase;
+   -ms-transform: translatey(-100px);
+   -webkit-transform: translatey(-100px);
+   transform: translatey(-100px);
+   -webkit-transition: all .2s ease-in-out;
+   transition: all .2s ease-in-out;
+ }
+
   .info {
     background-color: transparent;
     border: .0625rem solid $color-white;
     color: $color-white;
     display: inline-block;
     filter: alpha(opacity = 0);
-    margin: 3.125rem 0 0;
+    margin: 4.125rem 0 0 1.625rem;
     opacity: 0;
     padding: .4375rem .875rem;
     text-decoration: none;
     text-transform: uppercase;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+
+    @include media-breakpoint-only(lg) {
+       margin-top: 8.125rem;
+    }
+
+    @include media-breakpoint-only(xl) {
+       margin-top: 12.125rem;
+    }
+
 
     &:hover {
       box-shadow: 0 0 .3125rem $color-white;
