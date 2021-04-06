@@ -27,7 +27,7 @@ navigation is great for mentioning authors or other useful information that are 
   text-align: left;
 
   @include media-breakpoint-up(md) {
-     margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   &:hover {
@@ -86,7 +86,7 @@ navigation is great for mentioning authors or other useful information that are 
     font-weight: 900;
     padding: 1.625rem .625rem 0 1.625rem;
     position: relative;
-    text-transform: uppercase;;
+    text-transform: uppercase;
     -ms-transform: translatey(-100px);
     -webkit-transform: translatey(-100px);
     transform: translatey(-100px);
@@ -95,17 +95,17 @@ navigation is great for mentioning authors or other useful information that are 
   }
 
   h3 {
-   color: $color-white;
-   font-size: 1.3rem;
-   font-weight: 100;
-   padding: 0 .625rem .625rem 1.625rem;
-   position: relative;
-   text-transform: uppercase;
-   -ms-transform: translatey(-100px);
-   -webkit-transform: translatey(-100px);
-   transform: translatey(-100px);
-   -webkit-transition: all .2s ease-in-out;
-   transition: all .2s ease-in-out;
+    color: $color-white;
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding: 0 .625rem .625rem 1.625rem;
+    position: relative;
+    text-transform: uppercase;
+    -ms-transform: translatey(-100px);
+    -webkit-transform: translatey(-100px);
+    transform: translatey(-100px);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
  }
 
   .info {
@@ -123,11 +123,11 @@ navigation is great for mentioning authors or other useful information that are 
     transition: all .2s ease-in-out;
 
     @include media-breakpoint-only(lg) {
-       margin-top: 8.125rem;
+      margin-top: 8.125rem;
     }
 
     @include media-breakpoint-only(xl) {
-       margin-top: 12.125rem;
+      margin-top: 12.125rem;
     }
 
 
