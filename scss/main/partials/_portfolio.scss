@@ -54,7 +54,7 @@ navigation is great for mentioning authors or other useful information that are 
    }
 
   .overlay {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: $color-overlay-portfolio;
     height: 100%;
     left: 0;
     opacity: 0;
@@ -76,7 +76,7 @@ navigation is great for mentioning authors or other useful information that are 
   }
 
   h2 {
-    background: rgba(0, 0, 0, .6);
+    background: $color-h2-bckg-portfolio;
     color: $color-white;
     font-size: 1.0625rem;
     padding: .625rem;
