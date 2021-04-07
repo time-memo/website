@@ -60,16 +60,21 @@ navigation is great for mentioning authors or other useful information that are 
    }
 
   .overlay {
-    background-color: $color-portfolio;
+    background-color: transparent;
     height: 100%;
     left: 0;
-    opacity: 0;
+    opacity: 1;
     overflow: hidden;
     position: absolute;
     top: 0;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     width: 100%;
+
+    @include media-breakpoint-up(md){
+      background-color: $color-portfolio;
+      opacity: 0;
+    }
   }
 
   img {
@@ -110,18 +115,24 @@ navigation is great for mentioning authors or other useful information that are 
  }
 
   .info {
-    background-color: transparent;
+    background-color: $color-portfolio;
     border: .0625rem solid $color-white;
+    border-radius: .3rem;
     color: $color-white;
     display: inline-block;
     filter: alpha(opacity = 0);
     margin: 4.125rem 0 0 1.625rem;
-    opacity: 0;
+    opacity: 1;
     padding: .4375rem .875rem;
     text-decoration: none;
     text-transform: uppercase;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+
+    @include media-breakpoint-up(md){
+      background-color: transparent;
+      opacity: 0;
+    }
 
     @include media-breakpoint-only(lg) {
       margin-top: 8.125rem;
