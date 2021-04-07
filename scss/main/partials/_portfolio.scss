@@ -5,15 +5,17 @@ name: 04-Portfolio
 category: Components
 ---
 
-navigation is great for mentioning authors or other useful information that are not so important as the content itself.
+Portfolio class allows you to do the hover effect for displays that are larger then md. For smaller resolution there is only "Show more" button.
 
 ```html_example
-<ul class="menu menu--horizontal">
-  <li class="menu__item"><a href="#">Home</a></li>
-  <li class="menu__item"><a href="#">My work</a></li>
-  <li class="menu__item"><a href="#">About me</a></li>
-  <li class="menu__item"><a href="#">Contact me</a></li>
-</ul>
+<div class="portfolio">
+   <img class="img-fluid" src="../images/test-img-500x480.jpg" height="480">
+   <div class="overlay">
+         <h2>Clients name</h2>
+         <h3>Design/logo</h3>
+         <a class="info" href="#">Show more</a>
+   </div>
+</div>
 
 ```
  */
@@ -139,7 +141,7 @@ navigation is great for mentioning authors or other useful information that are 
     }
 
     @include media-breakpoint-only(xl) {
-      margin-top: 12.125rem;
+      margin-top: 38%;
     }
 
 
