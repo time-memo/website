@@ -18,7 +18,7 @@ navigation is great for mentioning authors or other useful information that are 
 ```
  */
 
-.hovereffect {
+.portfolio {
   border-radius: .3rem;
   cursor: default;
   display: inline-block;
@@ -71,7 +71,7 @@ navigation is great for mentioning authors or other useful information that are 
     transition: all .4s ease-in-out;
     width: 100%;
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       background-color: $color-portfolio;
       opacity: 0;
     }
@@ -129,7 +129,7 @@ navigation is great for mentioning authors or other useful information that are 
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       background-color: transparent;
       opacity: 0;
     }
