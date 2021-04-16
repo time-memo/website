@@ -1,0 +1,73 @@
+/*doc
+---
+title: Modal
+name: 02-Modal
+category: Content
+---
+
+Use `modal` for creating the popup with detailed information about the work.
+
+```html_example
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog-xl modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Type | of | Work</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Name of Client</h3>
+        <p>Description of Client - Here should be one or two sentences about the client, for example what industry s/he from, etc.</p>
+        <p> <a href="https://www.staging.ticha.fun/"> www.staging.ticha.fun</a> </p>
+        <img class="img-fluid d-block d-sm-block d-md-none" src="../images/showcase-500x333.jpg" alt="Showcase">
+        <img class="img-fluid d-none d-md-block d-lg-none" src="../images/showcase-800x533.jpg" alt="Showcase">
+        <img class="img-fluid d-none d-lg-block" src="../images/showcase-1140x760.jpg" alt="Showcase">
+          <img class="img-fluid d-block d-sm-block d-md-none" src="../images/showcase2-500x332.jpg" alt="Showcase 2">
+        <img class="img-fluid d-none d-md-block d-lg-none" src="../images/showcase2-800x531.jpg" alt="Showcase 2">
+        <img class="img-fluid d-none d-lg-block" src="../images/showcase2-1140x757.jpg" alt="Showcase 2">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+*/
+
+.modal-header {
+  background-color: $gray-100;
+  border-bottom: none;
+  padding-left: 0;
+
+  h4 {
+    font-size: 1rem;
+    padding-left: 2.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.modal-body {
+    margin: 0;
+    padding: 0;
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 1.4rem;
+    padding-left: 2.5rem;
+    padding-top: 1.4rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    padding-bottom: 1.4rem;
+    padding-left: 2.5rem;
+  }
+
+}
