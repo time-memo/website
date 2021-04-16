@@ -9,7 +9,7 @@ Use `modal` for creating the popup with detailed information about the work.
 
 ```html_example
 <div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog-xl modal-dialog-scrollable modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Type | of | Work</h4>
@@ -38,9 +38,19 @@ Use `modal` for creating the popup with detailed information about the work.
 ```
 */
 
+.modal {
+  background: $color-portfolio;
+}
+
+.modal-content {
+  border: 0;
+}
+
 .modal-header {
-  background-color: $gray-100;
+  background: $gray-100;
   border-bottom: 0;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
   padding-left: 0;
 
   h4 {
@@ -68,5 +78,13 @@ Use `modal` for creating the popup with detailed information about the work.
     margin-bottom: 0;
     padding-bottom: 1.4rem;
     padding-left: 2.5rem;
+    padding-right: 2rem;
   }
+}
+
+.modal-footer {
+  background: $gray-100;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border-top: 0;
 }
