@@ -9,6 +9,7 @@ const cssnano = require('cssnano');
 const rename = require('gulp-rename');
 const gulpHologram = require('gulp-hologram');
 const gulpHtmlmin = require('gulp-htmlmin');
+const gulpNunjucks = require('gulp-nunjucks');
 const yargs = require('yargs');
 const browserSync = require('browser-sync').create();
 const template = require('gulp-template');
@@ -43,9 +44,20 @@ const cssmin = () => {
 
 const css = gulp.series(sass, cssmin);
 
+const nunjucks = () => {
+	return gulp.src([
+		'html/**/*.njk',
+		'!html/components/*.njk',
+	])
+		.pipe(gulpNunjucks.compile({}))
+		.pipe(rename({extname: '.html'}))
+		.pipe(gulp.dest('temp/html/'));
+};
+
 const htmlmin = () => {
 	let stream = gulp.src([
-		'index.html',
+		'temp/html/**/*.html',
+		//'manifest.json',
 	]);
 
 	if (development) {
@@ -59,6 +71,8 @@ const htmlmin = () => {
 	})).pipe(gulp.dest('www'))
 		.pipe(browserSync.stream());
 };
+
+const html = gulp.series(nunjucks, htmlmin);
 
 // Documentation
 const hologram = () => {
@@ -80,10 +94,9 @@ const server = () => {
 	});
 };
 
-
 const watch = (callback) => {
-	gulp.watch(['scss/**/*.scss'], {interval: 500}, gulp.parallel(css, hologram));
-	gulp.watch(['*.html'], {interval: 500}, htmlmin);
+	gulp.watch(['scss/**/*.scss'], {interval: 500}, gulp.parallel(css/*, hologram*/));
+	gulp.watch(['html/**/*.njk'], {interval: 500}, html);
 
 	callback();
 };
@@ -100,7 +113,7 @@ const buildZip = () => {
 };
 
 
-const production = gulp.series(gulp.parallel(css, htmlmin), hologram);
+const production = gulp.series(gulp.parallel(css, html)/*, hologram*/);
 
 const defaultTask = gulp.series(setDevelopmentEnvironment, production, gulp.parallel(watch, server));
 
