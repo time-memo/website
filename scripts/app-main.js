@@ -1,13 +1,4 @@
-var togglerElement = document.getElementById("main-menu-toggler");
-var menuElement = document.getElementById("main-menu");
-var clickHandler = function (event) {
-	event.preventDefault();
+import {menuToggle} from './components/menu';
 
-	if (menuElement.classList.contains("show")) {
-		menuElement.classList.remove("show");
-	} else {
-		menuElement.classList.add("show");
-	}
-};
+menuToggle();
 
-togglerElement.addEventListener("click", clickHandler);
