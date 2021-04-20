@@ -16,7 +16,7 @@ function openModal(title: string, body: string) {
 
 	const modalHtml = `
 		<div class="modal" tabindex="-1" role="dialog" style="display: block;">
-		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+		  <div class="modal-dialog modal-dialog-scrollable modal-xl modal-dialog-centered" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <h4 class="modal-title">${title}</h4>
