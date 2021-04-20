@@ -16,6 +16,7 @@
     "browser-sync": "^2.26.14",
     "cssnano": "^4.1.10",
     "del": "^6.0.0",
+    "flow-bin": "^0.149.0",
     "gulp": "^4.0.2",
     "gulp-consolidate": "^0.2.0",
     "gulp-hologram": "^1.2.3",
