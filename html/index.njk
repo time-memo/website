@@ -12,8 +12,8 @@
                     </p>
             </div>
             <div class="col-12 col-md-6">
-                <img class="img-fluid d-none d-md-inline shadow-lg rounded-lg" src="../images/test-img-500x480.jpg" alt="My Photo" width="500" height="480">
-                <img class="img-fluid d-md-none shadow rounded" src="../images/test-img-340x272.jpg" alt="My Photo" width="340" height="272">
+                <img class="img-fluid d-none d-md-inline shadow-lg rounded-lg" src="../images/title-picture-500x480.jpg" alt="My Photo" width="500" height="480">
+                <img class="img-fluid d-md-none shadow rounded" src="../images/title-picture-320x272.jpg" alt="My Photo" width="340" height="272">
             </div>
         </div>
     </div>
@@ -24,50 +24,25 @@
             <div class="col-12">
                 <h2 class="content__heading">My Work</h2>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="portfolio">
-                    <img class="img-fluid d-none d-md-inline" src="../images/test-img-500x480.jpg" alt="">
-                    <img class="img-fluid d-md-none" src="../images/test-img-340x272.jpg">
-                    <div class="overlay">
-                        <h2>Hover effect 1</h2>
-                        <h3>Test hover</h3>
-                        <a class="info js-open-modal" href="/client-1.html">Show more</a>
+            {% for date, client in clients %}
+              {% if not client.hidden %}
+                <div class="col-12 col-md-6">
+                    <div class="portfolio">
+                        <img class="img-fluid d-md-none" width="{{ clientHeadPictureSizes.sm.x }}"
+					    	height="{{ clientHeadPictureSizes.sm.y }}" alt="{{ client.name }}"
+							src="{{ client.image }}-sm.jpg?">
+                        <img class="img-fluid d-none d-md-inline" width="{{ clientHeadPictureSizes.md.x }}"
+					    	height="{{ clientHeadPictureSizes.md.y }}" alt="{{ client.name }}"
+							src="{{ client.image }}-md.jpg?">
+                        <div class="overlay">
+                            <h2>{{ client.name }}</h2>
+                            <h3>{{ client.type }}</h3>
+                            <a class="info js-open-modal" href="{{ client.link }}">Show more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="portfolio">
-                    <img class="img-fluid d-none d-md-inline" src="../images/test-img-500x480.jpg" alt="">
-                    <img class="img-fluid d-md-none" src="../images/test-img-340x272.jpg">
-                    <div class="overlay">
-                        <h2>Hover effect 1</h2>
-                        <h3>Test hover</h3>
-                        <a class="info js-open-modal" href="/client-1.html">Show more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="portfolio">
-                    <img class="img-fluid d-none d-md-inline" src="../images/test-img-500x480.jpg" alt="">
-                    <img class="img-fluid d-md-none" src="../images/test-img-340x272.jpg">
-                    <div class="overlay">
-                        <h2>Hover effect 1</h2>
-                        <h3>Test hover</h3>
-                        <a class="info js-open-modal" href="/client-1.html">Show more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="portfolio">
-                    <img class="img-fluid d-none d-md-inline" src="../images/test-img-500x480.jpg" alt="">
-                    <img class="img-fluid d-md-none" src="../images/test-img-340x272.jpg">
-                    <div class="overlay">
-                        <h2>Hover effect 1</h2>
-                        <h3>Test hover</h3>
-                        <a class="info js-open-modal" href="/client-1.html">Show more</a>
-                    </div>
-                </div>
-            </div>
+              {% endif %}
+			{% endfor %}
         </div>
     </div>
 </div>

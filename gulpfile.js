@@ -54,7 +54,30 @@ const nunjucks = () => {
 		'html/**/*.njk',
 		'!html/components/*.njk',
 	])
-		.pipe(gulpNunjucks.compile({}))
+	
+		.pipe(gulpNunjucks.compile({
+			clientHeadPictureSizes: {
+				sm: {
+					x: 340,
+					y: 272,
+				},
+				md: {
+					x: 500,
+					y: 480,
+				},
+			},
+			getNextObjectKey: (database, key) => {
+				const keys = Object.keys(database);
+				const index = keys.indexOf(key);
+
+				if (index + 1 < keys.length) {
+					return keys[index + 1];
+				} else {
+					return null;
+				}
+			},
+			clients: require(__dirname + '/html/clients.json'),
+		}))
 		.pipe(rename({extname: '.html'}))
 		.pipe(gulp.dest('temp/html/'));
 };
