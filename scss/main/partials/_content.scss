@@ -171,7 +171,7 @@ The other variant with color backgroung which is used on the page.
 
   &__heading {
     font-size: 2.125rem;
-    font-weight: 100;
+    font-weight: 400;
     margin-bottom: 1.8rem;
     text-align: center;
 
@@ -185,7 +185,7 @@ The other variant with color backgroung which is used on the page.
 
     &--small {
       font-size: 2rem;
-      font-weight: 300;
+      font-weight: 500;
       margin-bottom: $content-padding;
 
       @include media-breakpoint-up(sm) {
