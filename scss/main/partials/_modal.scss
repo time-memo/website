@@ -48,10 +48,8 @@ Use `modal` for creating the popup with detailed information about the work.
   border-bottom: 0;
   border-top-left-radius: .3rem;
   border-top-right-radius: .3rem;
-  padding-left: 0;
   padding-left: 2.5rem;
   text-transform: uppercase;
-  
 }
 
 .client-body {
@@ -78,9 +76,11 @@ Use `modal` for creating the popup with detailed information about the work.
 
 .modal-header {
   @extend .client-title;
-  
+  padding-left: 0;
+
   h4 {
     font-size: 1rem;
+    padding-left: 2.5rem;
   }
 }
 
