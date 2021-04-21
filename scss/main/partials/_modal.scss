@@ -28,9 +28,6 @@ Use `modal` for creating the popup with detailed information about the work.
         <img class="img-fluid d-none d-md-block d-lg-none" src="../images/showcase2-800x531.jpg" alt="Showcase 2">
         <img class="img-fluid d-none d-lg-block" src="../images/showcase2-1140x757.jpg" alt="Showcase 2">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
     </div>
   </div>
 </div>
@@ -46,27 +43,24 @@ Use `modal` for creating the popup with detailed information about the work.
   border: 0;
 }
 
-.modal-header {
+.client-title {
   background: $gray-100;
   border-bottom: 0;
   border-top-left-radius: .3rem;
   border-top-right-radius: .3rem;
   padding-left: 0;
-
-  h4 {
-    font-size: 1rem;
-    padding-left: 2.5rem;
-    text-transform: uppercase;
-  }
+  padding-left: 2.5rem;
+  text-transform: uppercase;
+  
 }
 
-.modal-body {
+.client-body {
   margin: 0;
   padding: 0;
 
   h3 {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
     padding-bottom: 1.4rem;
     padding-left: 2.5rem;
@@ -82,9 +76,14 @@ Use `modal` for creating the popup with detailed information about the work.
   }
 }
 
-.modal-footer {
-  background: $gray-100;
-  border-bottom-left-radius: .3rem;
-  border-bottom-right-radius: .3rem;
-  border-top: 0;
+.modal-header {
+  @extend .client-title;
+  
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+.modal-body {
+  @extend .client-body;
 }
