@@ -1,5 +1,5 @@
 version: '1'
 
 thresholds:
-    error: 5
-    total: 10
+    error: 15
+    total: 30
