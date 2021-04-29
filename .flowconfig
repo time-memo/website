@@ -1,0 +1,16 @@
+[ignore]
+.*/log/.*
+.*/node_modules/config-chain/test/.*
+.*/production/.*
+.*/vendor/.*
+
+[include]
+
+[libs]
+.*/node_modules/.*
+
+[lints]
+
+[options]
+
+[strict]

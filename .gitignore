@@ -6,3 +6,4 @@ www/*.html
 temp/
 log/
 vendor/
+www/js/

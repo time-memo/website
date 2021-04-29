@@ -1,0 +1,14 @@
+{
+  "20. 4. 2021": {
+    "name": "escootie",
+    "type": "logo",
+    "link": "/client-1.html",
+    "image": "/images/clients/escootie"
+  },
+  "21. 4. 2021": {
+    "name": "OU",
+    "type": "portrait",
+    "link": "/client-2.html",
+    "image": "/images/clients/ou"
+  }
+}

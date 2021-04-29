@@ -44,17 +44,18 @@ Main menu in page header. It is still vertical on mobile.
   padding: 0;
 
   &__item {
-    color: theme-color('primary');
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     a {
       border-radius: .3rem;
       display: block;
       padding: .5rem 1rem;
+      color: $color-black;
 
       &:hover,
       &:focus {
         background: $gray-100;
+        color: theme-color('primary');
         text-decoration: none;
       }
     }
@@ -76,12 +77,15 @@ Main menu in page header. It is still vertical on mobile.
       padding: .3rem;
 
       a {
+        color: $color-black;
         display: inline;
         padding-right: .5rem;
 
         &:hover,
         &:focus {
           background: none;
+          color: theme-color('primary');
+          text-decoration: none;
         }
       }
     }

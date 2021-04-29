@@ -1,0 +1,73 @@
+{% include 'components/header.njk' %}
+<div class="content content--light content--beveled" id="about-me">
+    <div class="content__inner">
+        <div class="row text-center">
+            <div class="col-12 col-md-6">
+                <h2 class="content__heading">Adela Ticha</h2>
+                <p>
+                    When our family welcomed a new member Robin in September 2019, I&nbsp;realized it was the best time to jump into my old passion - <span class="strong">graphic&nbsp;design</span>. 
+                </p>
+                <p> 
+                    Now during my maternity leave, I&nbsp;enjoy working in Inkscape and building logos for various projects.
+                </p>
+                <p>
+                    I like to learn about those projects. I&nbsp;am good at pointing out unique facts and use them for logo design. I&nbsp;am also focused on detail.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <img class="img-fluid d-none d-md-inline shadow-lg rounded-lg" src="../images/profile-picture-1000x850.jpg" alt="My Photo" width="500" height="425">
+                <img class="img-fluid d-md-none shadow rounded" src="../images/profile-picture-680x578.jpg" alt="My Photo" width="340" height="298">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content content--bg content--beveled" id="my-work">
+    <div class="content__inner">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="content__heading">My Work</h2>
+            </div>
+            {% for date, client in clients %}
+              {% if not client.hidden %}
+                <div class="col-12 col-md-6">
+                    <div class="portfolio">
+                        <img class="img-fluid d-md-none" width="{{ clientHeadPictureSizes.sm.x }}"
+					    	height="{{ clientHeadPictureSizes.sm.y }}" alt="{{ client.name }}"
+							src="{{ client.image }}-sm.jpg?">
+                        <img class="img-fluid d-none d-md-inline" width="{{ clientHeadPictureSizes.md.x }}"
+					    	height="{{ clientHeadPictureSizes.md.y }}" alt="{{ client.name }}"
+							src="{{ client.image }}-md.jpg?">
+                        <div class="overlay">
+                            <h2>{{ client.name }}</h2>
+                            <h3>{{ client.type }}</h3>
+                            <a class="info js-open-modal" href="{{ client.link }}">Show more</a>
+                        </div>
+                    </div>
+                </div>
+              {% endif %}
+			{% endfor %}
+        </div>
+    </div>
+</div>
+<div class="content content--dark content--beveled" id="contact-me">
+    <div class="content__inner">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="content__heading">Contacts</h2>
+            </div>
+            <div class="col-12 col-md-6 content__center">
+                <p class="content__heading--contacts">
+                    Phone: <a href="tel:+420776470413">+420 776 470 413</a>
+                 </p>
+                 <p class="content__heading--contacts">
+                    E-mail: <a href="mailto:adela@ticha.fun">adela@ticha.fun</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <img class="img-fluid d-none d-md-inline shadow-lg rounded-lg" src="../images/profile-picture-1000x850.jpg" alt="My Photo" width="500" height="425">
+                <img class="img-fluid d-md-none shadow rounded" src="../images/profile-picture-680x578.jpg" alt="My Photo" width="340" height="298">
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'components/footer.njk' %}
