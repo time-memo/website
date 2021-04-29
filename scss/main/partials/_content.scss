@@ -171,9 +171,10 @@ The other variant with color backgroung which is used on the page.
 
   &__heading {
     font-size: 2.125rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 1.8rem;
     text-align: center;
+    text-transform: uppercase;
 
     @include media-breakpoint-up(sm) {
       font-size: 2.75rem;
@@ -183,18 +184,25 @@ The other variant with color backgroung which is used on the page.
       font-size: 3.25rem;
     }
 
-    &--small {
-      font-size: 2rem;
+    &--contacts {
+      font-size: 1.2rem;
       font-weight: 500;
-      margin-bottom: $content-padding;
+
+      a {
+        color: $color-white;
+        text-decoration: underline;
+      }
 
       @include media-breakpoint-up(sm) {
-        font-size: 2.25rem;
+        font-size: 1.3rem;
       }
 
       @include media-breakpoint-up(md) {
-        font-size: 2.5rem;
-        margin-bottom: $content-padding-lg;
+        font-size: 1.5rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.8rem;
       }
     }
   }
