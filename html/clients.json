@@ -2,13 +2,13 @@
   "20. 4. 2021": {
     "name": "escootie",
     "type": "logo",
-    "link": "/client-1.html",
+    "link": "/clients/escootie.html",
     "image": "/images/clients/escootie"
   },
   "21. 4. 2021": {
     "name": "OU",
     "type": "portrait",
-    "link": "/client-2.html",
+    "link": "clients/UniversityOfOstrava.html",
     "image": "/images/clients/ou"
   }
 }
