@@ -54,12 +54,12 @@ The other variant with color backgroung which is used on the page.
 
   &--beveled {
     overflow: visible;
-    padding-bottom: $content-padding - 2rem;
+    padding-bottom: $content-padding;
     padding-top: $content-padding - 2rem;
     position: relative;
 
     @include media-breakpoint-up(lg) {
-      padding-bottom: $content-padding-lg - 3rem;
+      padding-bottom: $content-padding-lg - 2rem;
       padding-top: $content-padding-lg - 3rem;
     }
 
