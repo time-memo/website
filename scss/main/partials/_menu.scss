@@ -48,9 +48,9 @@ Main menu in page header. It is still vertical on mobile.
 
     a {
       border-radius: .3rem;
+      color: $color-black;
       display: block;
       padding: .5rem 1rem;
-      color: $color-black;
 
       &:hover,
       &:focus {
