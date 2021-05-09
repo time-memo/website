@@ -31,6 +31,8 @@ navigation is great for mentioning authors or other useful information that are 
   &__logo {
     display: block;
     margin: auto;
+    padding-bottom: 0.5625rem;
+    padding-top: 0.5625rem;
     width: 8.625rem;
 
     @include media-breakpoint-up(md) {
