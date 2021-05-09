@@ -140,7 +140,7 @@ The other variant with color backgroung which is used on the page.
 
   &--dark {
     background: theme-color('primary');
-    color: $white;
+    color: $color-black;
 
     &::before {
       background-image: linear-gradient(to right top, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
@@ -189,7 +189,7 @@ The other variant with color backgroung which is used on the page.
       font-weight: 500;
 
       a {
-        color: $color-white;
+        color: $color-black;
         text-decoration: underline;
       }
 
