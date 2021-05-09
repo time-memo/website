@@ -2,6 +2,7 @@ node_modules/
 www/css/
 www/fonts/
 www/docs/
+www/clients/*.html
 www/*.html
 temp/
 log/
