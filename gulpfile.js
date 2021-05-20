@@ -93,6 +93,7 @@ const htmlmin = () => {
 			noRobots: true,
 			version: '@dev',
 			pageUrl: 'http://localhost:8000',
+			googleAnalyticsWebsite: 'G-xxxxxxxxx',
 		}));
 	}
 
