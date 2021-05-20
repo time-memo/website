@@ -1,22 +1,20 @@
 {% set pageDate = '21. 4. 2021' %}
 {% set client = clients[pageDate] %}
 {% set pageTitle = client.name %}
-{% set pageDescription = 'During my studies, I made blablabla' %}
+{% set pageDescription = 'My pasion for graphic design started during my studies at University of Ostrava. Here is the showcase of my screening portraits.' %}
 {% set pageImage = client.image + '-md.jpg' %}
 
 {% include 'components/header.njk' %}
 <div class="content content--light content--beveled" id="about-me">
     <div class="content__inner">
-        <h4 id="page-title">Type | of | Work</h4>
+        <h4 id="page-title">Portrait</h4>
 
         <div id="page-body">
-            <h3>Client 2</h3>
+            <h3>University of Ostrava</h3>
             <p>
-                Description of Client 2 - Here should be one or two sentences about the client, for example what industry
-                s/he
-                from, etc.
+                My pasion for graphic design started during my studies at University of Ostrava. Here is the showcase of my screening portraits.
             </p>
-            <p><a href="https://www.staging.ticha.fun/"> www.staging.ticha.fun</a></p>
+            <p><a href="https://www.osu.eu/"> www.osu.eu</a></p>
             <img class="img-fluid d-block d-sm-block d-md-none" src="../images/showcase-500x333.jpg" alt="Showcase">
             <img class="img-fluid d-none d-md-block d-lg-none" src="../images/showcase-800x533.jpg" alt="Showcase">
             <img class="img-fluid d-none d-lg-block" src="../images/showcase-1140x760.jpg" alt="Showcase">
