@@ -50,13 +50,13 @@
 		<% } %>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=<%= googleAnalyticsWebsite %>"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=<%= googleAnalytics %>"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', '<%= googleAnalyticsWebsite %>');
+		gtag('config', '<%= googleAnalytics %>');
 	</script>
 
 </head>
