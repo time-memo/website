@@ -90,6 +90,7 @@ const htmlmin = () => {
 
 	if (development) {
 		stream = stream.pipe(template({
+			noRobots: true,
 			version: '@dev',
 			pageUrl: 'http://localhost:8000',
 		}));

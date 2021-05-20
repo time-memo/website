@@ -45,5 +45,8 @@
 
     <meta name="theme-color" content="#000000">
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<% if (typeof(noRobots) !== "undefined" && noRobots) { %>
+			<meta name="robots" content="noindex, nofollow">
+		<% } %>
 </head>
 <body>
