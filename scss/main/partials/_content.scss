@@ -1,5 +1,5 @@
-$content-padding: 4rem !default;
-$content-padding-lg: 6rem !default;
+$content-padding: 5.68rem !default;
+$content-padding-lg: 6.5rem !default;
 $almost-transparent: rgba($color-white, .001) !default; // workaround for Safari's linear-gradient transparent bug
 
 /*doc
@@ -45,11 +45,11 @@ The other variant with color backgroung which is used on the page.
 .content {
   overflow: hidden;
   padding-bottom: $content-padding;
-  padding-top: $content-padding;
+  padding-top: $content-padding + 3rem;
 
   @include media-breakpoint-up(lg) {
     padding-bottom: $content-padding-lg;
-    padding-top: $content-padding-lg;
+    padding-top: $content-padding-lg + .5rem;
   }
 
   &--beveled {
