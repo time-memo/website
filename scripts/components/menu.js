@@ -1,6 +1,8 @@
 export function menuToggle() {
 	let togglerElement = document.getElementById("main-menu-toggler");
 	let menuElement = document.getElementById("main-menu");
+	let menuItems = document.querySelectorAll("#main-menu a");
+
 	let clickHandler = function (event) {
 		event.preventDefault();
 
@@ -11,16 +13,13 @@ export function menuToggle() {
 		}
 	};
 
-	togglerElement.addEventListener("click", clickHandler);
-
-	let menuItemElement1 = document.getElementById("menu-1");
-	let menuItemElement2 = document.getElementById("menu-2");
-	let menuItemElement3 = document.getElementById("menu-3");
 	let menuCloseHandler = function () {
 		menuElement.classList.remove("show");
 	};
 
-	menuItemElement1.addEventListener("click", menuCloseHandler);
-	menuItemElement2.addEventListener("click", menuCloseHandler);
-	menuItemElement3.addEventListener("click", menuCloseHandler);
+	togglerElement.addEventListener("click", clickHandler);
+
+	for(let menuItemElement of menuItems){
+		menuItemElement.addEventListener("click", menuCloseHandler);
+	}
 }
