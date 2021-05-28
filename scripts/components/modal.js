@@ -7,6 +7,15 @@ function transformResponseToText(response) {
 	return response.text();
 }
 
+function clickCloseModalHandler(event: Event) {
+	event.preventDefault();
+
+	document.body.classList.remove('modal-open');
+	const modalElement = document.getElementById(modalId);
+
+	modalElement.remove();
+}
+
 function registerCloseModalListener() {
 	const closeButtonElement = document.getElementById(closeButtonId);
 
@@ -52,15 +61,6 @@ function parseContentForModal(content) {
 	const pageBody = html.getElementById('page-body');
 
 	openModal(pageTitle.textContent, pageBody.innerHTML);
-}
-
-function clickCloseModalHandler(event: Event) {
-	event.preventDefault();
-
-	document.body.classList.remove('modal-open');
-	const modalElement = document.getElementById(modalId);
-
-	modalElement.remove();
 }
 
 function clickOpenModalHandler(event: Event) {
