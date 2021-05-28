@@ -7,6 +7,12 @@ function transformResponseToText(response) {
 	return response.text();
 }
 
+function registerCloseModalListener() {
+	const closeButtonElement = document.getElementById(closeButtonId);
+
+	closeButtonElement.addEventListener("click", clickCloseModalHandler);
+}
+
 function openModal(title: string, body: string) {
 	const closeButtonHtml = `
 		<button id="${closeButtonId}" type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -36,12 +42,6 @@ function openModal(title: string, body: string) {
 	document.body.classList.add('modal-open');
 
 	registerCloseModalListener();
-}
-
-function registerCloseModalListener() {
-	const closeButtonElement = document.getElementById(closeButtonId);
-
-	closeButtonElement.addEventListener("click", clickCloseModalHandler);
 }
 
 function parseContentForModal(content) {
