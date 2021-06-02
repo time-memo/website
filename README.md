@@ -5,6 +5,10 @@ Website Portfolio
 
 Portfolio for designers work
 
+## Technologies
+
+The project is based on Bootstrap 4.5.2.
+
 ## Requirements
  - NodeJS 12.10+
  - Ruby 2.5+
