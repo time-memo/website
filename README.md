@@ -7,7 +7,10 @@ Portfolio for designers work
 
 ## Technologies
 
-The project is based on Bootstrap 4.5.2.
+The project is based on Bootstrap 4.5.2. and leverage the SASS. 
+We used nunjucks for templating the html.
+
+The site is running on AWS. The whole deployment is automated by CI/CD pipeline in GitHub Actions.
 
 ## Requirements
  - NodeJS 12.10+
