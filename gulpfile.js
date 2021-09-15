@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* eslint-disable no-console, id-length */
 
 const browserSync = require('browser-sync').create();
 const gulp = require('gulp');

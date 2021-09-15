@@ -31,11 +31,11 @@
               {% if not client.hidden %}
                 <div class="col-12 col-md-6">
                     <div class="portfolio">
-                        <img class="img-fluid d-md-none" width="{{ clientHeadPictureSizes.sm.x }}"
-					    	height="{{ clientHeadPictureSizes.sm.y }}" alt="{{ client.name }}"
+                        <img class="img-fluid d-md-none" width="{{ clientHeadPictureSizes.sm.width }}"
+					    	height="{{ clientHeadPictureSizes.sm.height }}" alt="{{ client.name }}"
 							src="{{ client.image }}-sm.jpg?">
-                        <img class="img-fluid d-none d-md-inline" width="{{ clientHeadPictureSizes.md.x }}"
-					    	height="{{ clientHeadPictureSizes.md.y }}" alt="{{ client.name }}"
+                        <img class="img-fluid d-none d-md-inline" width="{{ clientHeadPictureSizes.md.width }}"
+					    	height="{{ clientHeadPictureSizes.md.height }}" alt="{{ client.name }}"
 							src="{{ client.image }}-md.jpg?">
                         <div class="overlay">
                             <h2>{{ client.name }}</h2>
