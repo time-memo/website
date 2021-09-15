@@ -1,4 +1,4 @@
-/* eslint-disable no-console, id-length */
+/* eslint-disable no-console */
 
 const browserSync = require('browser-sync').create();
 const gulp = require('gulp');
@@ -58,12 +58,12 @@ const nunjucks = () => {
 		.pipe(gulpNunjucks.compile({
 			clientHeadPictureSizes: {
 				sm: {
-					x: 340,
-					y: 272,
+					width: 340,
+					height: 272,
 				},
 				md: {
-					x: 500,
-					y: 480,
+					width: 500,
+					height: 480,
 				},
 			},
 			getNextObjectKey: (database, key) => {
