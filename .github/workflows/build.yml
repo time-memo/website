@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Build Image
-        run: docker-compose up -f
+        run: docker-compose up -t
 
       - name: Clean
         run: docker run --rm --volume `pwd`:/www make -C production/ clean
