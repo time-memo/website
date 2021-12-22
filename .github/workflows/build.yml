@@ -19,10 +19,10 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build Image
-        run: docker-compose up -t website-portfolio
+        run: docker-build -t website-portfolio
 
-      # - name: Clean
-      #   run: docker run --rm --volume `pwd`:/www website-portfolio make -C production/ clean
+      - name: Clean
+        run: docker run --rm --volume `pwd`:/www website-portfolio make -C production/ clean
 
       - name: Build
         run: docker run --rm --volume `pwd`:/www website-portfolio make -C production/ package
