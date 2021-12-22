@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Clone
         uses: actions/checkout@v2
-          with:
-           fetch-depth: 0
-           
+        with:
+          fetch-depth: 0
+
       - name: Build Image
         run: docker-compose up -t
 
