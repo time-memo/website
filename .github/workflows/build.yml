@@ -15,11 +15,8 @@ jobs:
       - name: Build Image
         run: docker-compose up -d
 
-      - name: Clean
-        run: docker-compose run --rm --volume `pwd`:/www website-portfolio make -C production/ clean
-
-      - name: Build
-        run: docker-compose run --rm --volume `pwd`:/www website-portfolio make -C production/ package
+      - name: Clean & Build
+        run: docker-compose run --rm make -C production/ clean package
 
       - name: Store Artifact
         uses: actions/upload-artifact@v1
