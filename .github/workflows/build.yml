@@ -21,8 +21,8 @@ jobs:
       - name: Build Image
         run: docker-compose up -t
 
-      - name: Clean
-        run: docker run --rm --volume `pwd`:/www website-portfolio make -C production/ clean
+      # - name: Clean
+      #   run: docker run --rm --volume `pwd`:/www website-portfolio make -C production/ clean
 
       - name: Build
         run: docker run --rm --volume `pwd`:/www website-portfolio make -C production/ package
