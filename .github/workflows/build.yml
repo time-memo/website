@@ -22,10 +22,10 @@ jobs:
         run: docker-compose up -t
 
       - name: Clean
-        run: docker run --rm --volume `pwd`:/www ticha-website make -C production/ clean
+        run: docker run --rm --volume `pwd`:/www website-portfolio make -C production/ clean
 
       - name: Build
-        run: docker run --rm --volume `pwd`:/www make ticha-website -C production/ package
+        run: docker run --rm --volume `pwd`:/www make website-portfolio -C production/ package
       
       # - name: Install Ruby
       #   uses: actions/setup-ruby@v1
