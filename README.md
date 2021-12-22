@@ -17,21 +17,12 @@ The site is running on AWS. The whole deployment is automated by CI/CD pipeline 
  - Ruby 2.5+
 
 
-## Installation locally
+## Installation & Run
 
 ```
 #!bash
 
-npm install
-bundle install
-```
-
-## Run locally
-
-```
-#!bash
-
-npm start
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
 ```
 
 

@@ -1,0 +1,8 @@
+version: "3.3"
+
+services:
+  website-portfolio:
+    build: .
+    volumes:
+      - .:/www/
+    working_dir: /www
