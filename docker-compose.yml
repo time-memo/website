@@ -2,8 +2,7 @@ version: "3.3"
 
 services:
   website-portfolio:
-    build: .
-    image: https://hub.docker.com/layers/michalsimon/static-website/node14/images/sha256-4e8f4300654de965ddf182793c8d1a79db494d92c5de28c68cb1788024a31f25
+    image: docker pull michalsimon/static-website:node14
     volumes:
       - .:/www/
     working_dir: /www
