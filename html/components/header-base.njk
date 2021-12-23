@@ -59,5 +59,8 @@
 		gtag('config', '<%= googleAnalytics %>');
 	</script>
 
+<!-- Amazon CloudWatch RUM -->
+	<script>(function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.getElementsByTagName('script')[0]);})('cwr','b27c87b9-95f7-4b6b-ac6a-ae196e809bef','1.0.0','eu-central-1','https://client.rum.us-east-1.amazonaws.com/1.0.2/cwr.js',{sessionSampleRate:1,guestRoleArn:"arn:aws:iam::672034629009:role/RUM-Monitor-eu-central-1-672034629009-3358258810461-Unauth",identityPoolId:"eu-central-1:0c6a164c-034a-40c8-9ba8-c1d340d9d55e",endpoint:"https://dataplane.rum.eu-central-1.amazonaws.com",telemetries:["performance","errors","http"],allowCookies:true,enableXRay:false});</script>
+
 </head>
 <body>
