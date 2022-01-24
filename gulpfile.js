@@ -77,6 +77,7 @@ const nunjucks = () => {
 				}
 			},
 			clients: require(__dirname + '/html/clients.json'),
+			year: new Date().getFullYear(),
 		}))
 		.pipe(rename({extname: '.html'}))
 		.pipe(gulp.dest('temp/html/'));
