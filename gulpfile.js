@@ -146,9 +146,13 @@ const server = () => {
 };
 
 const watch = (callback) => {
-	gulp.watch(['scss/**/*.scss'], {interval: 500}, gulp.parallel(css, hologram));
-	gulp.watch(['html/**/*.njk'], {interval: 500}, html);
-	gulp.watch(['scripts/**/*.js'], {interval: 500}, js);
+	const watchConfig = {
+		interval: 500,
+		usePolling: true,
+	};
+	gulp.watch(['scss/**/*.scss'], watchConfig, gulp.parallel(css, hologram));
+	gulp.watch(['html/**/*.njk'], watchConfig, html);
+	gulp.watch(['scripts/**/*.js'], watchConfig, js);
 
 	callback();
 };
