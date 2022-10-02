@@ -1,9 +1,9 @@
-{% set pageTitleMain = 'Adela Ticha - Graphic Designer' %}
-{% set pageDescriptionMain = 'I am graphic designer, working in Inkscape. I am good at pointing out unique facts and use them for logo design. I am also focused on detail.' %}
-{% set pageKeywordsMain = 'logo, design, graphic, graphic design, application design, Designer, Graphic Designer, Adela Ticha, Ticha, Adela' %}
+{% set pageTitleMain = 'BiteMe - Online Multiplayer Snake' %}
+{% set pageDescriptionMain = 'BiteMe is an online multiplayer snake game played on a shared screen. Enjoy some competitive fun with your friends by playing this all-time classic! Simply scan the QR code and control the snake on the screen using your phone.' %}
+{% set pageKeywordsMain = 'game, online, multiplayer, shared screen, snake, multiplayer snake' %}
 
 {% if pageTitle is defined %}
-	{% set title = pageTitle + ' | Adela Ticha' %}
+	{% set title = pageTitle %}
 {% else %}
 	{% set title = pageTitleMain %}
 {% endif %}
@@ -26,11 +26,11 @@
     <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="{{ keywords }}">
-	<meta name="apple-mobile-web-app-title" content="Adela Ticha - Graphic Designer">
-	<meta name="author" content="Jiri Tichy">
-	<meta name="twitter:site" content="Adela Ticha - Graphic Designer">
-	<meta name="application-name" content="Adela Ticha - Graphic Designer">
-	<meta property="og:site_name" content="Adela Ticha - Graphic Designer">
+	<meta name="apple-mobile-web-app-title" content="BiteMe - Online Multiplayer Snake">
+	<meta name="author" content="Tina Zhou">
+	<meta name="twitter:site" content="BiteMe - Online Multiplayer Snake">
+	<meta name="application-name" content="BiteMe - Online Multiplayer Snake">
+	<meta property="og:site_name" content="BiteMe - Online Multiplayer Snake">
 	<meta property="og:type" content="service">
 	<meta name="twitter:card" content="summary_large_image">
 
@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="/css/style-main.min.css?v<%= version %>">
 
     <meta name="theme-color" content="#000000">
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<% if (typeof(noRobots) !== "undefined" && noRobots) { %>
 			<meta name="robots" content="noindex, nofollow">
 		<% } %>

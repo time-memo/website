@@ -76,7 +76,6 @@ const nunjucks = () => {
 					return null;
 				}
 			},
-			clients: require(__dirname + '/html/clients.json'),
 			year: new Date().getFullYear(),
 		}))
 		.pipe(rename({extname: '.html'}))
