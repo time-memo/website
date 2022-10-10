@@ -7,7 +7,7 @@ $theme-colors: (
 );
 
 $color-black: #000;
-$color-background: lighten(theme-color('secondary'));
+$color-background: lighten(theme-color('secondary'), 20);
 $color-white: #fff;
 $color-portfolio: rgba(0, 0, 0, .6);
 
