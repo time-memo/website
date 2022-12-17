@@ -10,19 +10,24 @@ export function carouselHandler() {
 
   const handleCarouselClick = (direction) => {
     const allItems = document.getElementsByClassName("carousel-item");
+    const allIndicators = document.getElementsByClassName("carousel-indicator");
     const last = allItems.length - 1;
 
     if (direction === NEXT) {
       for (let i = 0; i < allItems.length; i = i + 1) {
         const isActive = allItems[i].classList.contains("active");
+        // find active
         if (isActive) {
+          // move current left
           allItems[i].classList.add("carousel-item-left");
           if (i === last) {
+            // move first left if last
             allItems[0].classList.add("carousel-item-next");
             setTimeout(function () {
               allItems[0].classList.add("carousel-item-left");
             }, 0);
           } else {
+            // move next left
             allItems[i + 1].classList.add("carousel-item-next");
             setTimeout(function () {
               allItems[i + 1].classList.add("carousel-item-left");
@@ -30,14 +35,19 @@ export function carouselHandler() {
           }
 
           setTimeout(function () {
+            // remove moved out classes
             allItems[i].classList.remove("active", "carousel-item-left");
+            allIndicators[i].classList.remove("active");
 
+            // add active classes
             if (i === last) {
               allItems[0].classList.remove("carousel-item-next", "carousel-item-left");
               allItems[0].classList.add("active");
+              allIndicators[0].classList.add("active");
             } else {
               allItems[i + 1].classList.remove("carousel-item-next", "carousel-item-left");
               allItems[i + 1].classList.add("active");
+              allIndicators[i + 1].classList.add("active");
             }
           }, INTERVAL);
         }
@@ -62,13 +72,15 @@ export function carouselHandler() {
 
           setTimeout(function () {
             allItems[i].classList.remove("active", "carousel-item-right");
-
+            allIndicators[i].classList.remove("active");
             if (i === 0) {
               allItems[last].classList.remove("carousel-item-prev", "carousel-item-right");
               allItems[last].classList.add("active");
+              allIndicators[last].classList.add("active");
             } else {
               allItems[i - 1].classList.remove("carousel-item-prev", "carousel-item-right");
               allItems[i - 1].classList.add("active");
+              allIndicators[i - 1].classList.add("active");
             }
           }, INTERVAL);
         }
