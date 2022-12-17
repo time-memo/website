@@ -9,38 +9,38 @@ export function carouselHandler() {
   const next = document.getElementsByClassName("carousel-control-next")[0];
 
   const handleCarouselClick = (direction) => {
-    console.log(direction);
     const allItems = document.getElementsByClassName("carousel-item");
 
-    let start, end, increment, className;
     if (direction === NEXT) {
-      start = 0;
-      end = allItems.length
-      increment = 1
-      className = "carousel-item-left"
+      for (let i = 0; i < allItems.length; i = i + 1) {
+        const isActive = allItems[i].classList.contains("active");
+        if (isActive) {
+          allItems[i].classList.add("carousel-item-left");
+          allItems[i + 1].classList.add("carousel-item-next", "carousel-item-left");
+
+          setTimeout(function () {
+            allItems[i].classList.remove("active", "carousel-item-left");
+            allItems[i + 1].classList.remove("carousel-item-next", "carousel-item-left");
+            allItems[i + 1].classList.add("active");
+          }, ONE_SECOND);
+        }
+      }
     } else {
-      start = allItems.length - 1;
-      end = 0
-      increment = -1
-      className = "carousel-item-right"
-    }
+      for (let i = allItems.length - 1; i >= 0; i = i - 1) {
+        const isActive = allItems[i].classList.contains("active");
+        if (isActive) {
+          allItems[i].classList.add("carousel-item-right");
+          allItems[i - 1].classList.add("carousel-item-prev", "carousel-item-right");
 
-    console.log(start, end, increment);
-
-    for (let i = start; direction === NEXT ? i < end : i >= end; i = i+increment) {
-      console.log(i);
-      const isActive = allItems[i].classList.contains("active");
-      if (isActive) {
-        allItems[i].classList.add(className);
-        allItems[i + increment].classList.add("carousel-item-next", className);
-
-        setTimeout(function () {
-          allItems[i].classList.remove("active", className);
-          allItems[i + increment].classList.remove("carousel-item-next", className);
-          allItems[i + increment].classList.add("active");
-        }, ONE_SECOND)
+          setTimeout(function () {
+            allItems[i].classList.remove("active", "carousel-item-right");
+            allItems[i - 1].classList.remove("carousel-item-prev", "carousel-item-right");
+            allItems[i - 1].classList.add("active");
+          }, ONE_SECOND);
+        }
       }
     }
+
   };
 
   previous.addEventListener("click", (event) => {
