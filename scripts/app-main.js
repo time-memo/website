@@ -1,6 +1,5 @@
 import {menuToggle} from './components/menu';
-import {modal} from './components/modal';
+import { carouselHandler } from './components/carouselHandler.js';
 
 menuToggle();
-modal('js-open-modal');
-
+carouselHandler()
