@@ -15,6 +15,7 @@ export function carouselHandler() {
 
     if (direction === NEXT) {
       for (let i = 0; i < allItems.length; i = i + 1) {
+        const next = i + 1;
         const isActive = allItems[i].classList.contains("active");
         // find active
         if (isActive) {
@@ -22,16 +23,10 @@ export function carouselHandler() {
           allItems[i].classList.add("carousel-item-left");
           if (i === last) {
             // move first left if last
-            allItems[0].classList.add("carousel-item-next");
-            setTimeout(function () {
-              allItems[0].classList.add("carousel-item-left");
-            }, 0);
+            setNextAndMove(allItems[0], NEXT);
           } else {
             // move next left
-            allItems[i + 1].classList.add("carousel-item-next");
-            setTimeout(function () {
-              allItems[i + 1].classList.add("carousel-item-left");
-            }, 0);
+            setNextAndMove(allItems[next], NEXT);
           }
 
           setTimeout(function () {
@@ -41,52 +36,71 @@ export function carouselHandler() {
 
             // add active classes
             if (i === last) {
-              allItems[0].classList.remove("carousel-item-next", "carousel-item-left");
-              allItems[0].classList.add("active");
-              allIndicators[0].classList.add("active");
+              removeMovingClasses(allItems[0], NEXT);
+              addActive([ allItems[0], allIndicators[0] ]);
             } else {
-              allItems[i + 1].classList.remove("carousel-item-next", "carousel-item-left");
-              allItems[i + 1].classList.add("active");
-              allIndicators[i + 1].classList.add("active");
+              removeMovingClasses(allItems[next], NEXT);
+              addActive([ allItems[next], allIndicators[next] ]);
             }
           }, INTERVAL);
         }
       }
     } else {
       for (let i = last; i >= 0; i = i - 1) {
+        const previous = i - 1
         const isActive = allItems[i].classList.contains("active");
         if (isActive) {
           allItems[i].classList.add("carousel-item-right");
 
           if (i === 0) {
-            allItems[last].classList.add("carousel-item-prev");
-            setTimeout(function () {
-              allItems[last].classList.add("carousel-item-right");
-            }, 0);
+            setNextAndMove(allItems[last], PREVIOUS)
           } else {
-            allItems[i - 1].classList.add("carousel-item-prev");
-            setTimeout(function () {
-              allItems[i - 1].classList.add("carousel-item-right");
-            }, 0);
+            setNextAndMove(allItems[previous], PREVIOUS)
           }
 
           setTimeout(function () {
             allItems[i].classList.remove("active", "carousel-item-right");
             allIndicators[i].classList.remove("active");
             if (i === 0) {
-              allItems[last].classList.remove("carousel-item-prev", "carousel-item-right");
-              allItems[last].classList.add("active");
-              allIndicators[last].classList.add("active");
+              removeMovingClasses(allItems[last], PREVIOUS)
+              addActive([allItems[last], allIndicators[last]])
             } else {
-              allItems[i - 1].classList.remove("carousel-item-prev", "carousel-item-right");
-              allItems[i - 1].classList.add("active");
-              allIndicators[i - 1].classList.add("active");
+              removeMovingClasses(allItems[previous], PREVIOUS)
+              addActive([allItems[previous], allIndicators[previous]])
             }
           }, INTERVAL);
         }
       }
     }
 
+  };
+
+  const setNextAndMove = (carouselItem, direction) => {
+    let classDirection;
+    let classOrientation;
+    if (direction === NEXT) {
+      classDirection = "carousel-item-next";
+      classOrientation = "carousel-item-left";
+    } else {
+      classDirection = "carousel-item-prev";
+      classOrientation = "carousel-item-right";
+    }
+    carouselItem.classList.add(classDirection);
+    setTimeout(function () {
+      carouselItem.classList.add(classOrientation);
+    }, 0);
+  };
+
+  const addActive = (elements) => {
+    elements.forEach(element => element.classList.add("active"));
+  };
+
+  function removeMovingClasses (element, direction) {
+    if (direction === NEXT) {
+      element.classList.remove("carousel-item-next", "carousel-item-left");
+    } else {
+      element.classList.remove("carousel-item-prev", "carousel-item-right");
+    }
   };
 
   previous.addEventListener("click", (event) => {
