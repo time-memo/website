@@ -1,16 +1,33 @@
 .play-button {
   background-color: theme-color('primary');
   color: white;
-  font-size: larger;
   border: none;
   border-radius: 1rem;
-  width: 8rem;
-  height: 4rem;
-  margin: 1rem;
   transition: .2s ease-out;
 
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.25);
+  &--hero {
+    @extend .play-button;
+    font-size: larger;
+    margin: 1rem;
+    width: 8rem;
+    height: 4rem;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.4);
+    }
   }
+
+  &--menu {
+    @extend .play-button;
+    padding: 1rem;
+    margin: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
+
 }
