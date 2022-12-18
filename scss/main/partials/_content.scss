@@ -163,6 +163,8 @@ The other variant with color backgroung which is used on the page.
 
   &__inner {
     @extend .container;
+    margin-top: -5rem;
+    padding-top: 7rem;
   }
 
   &__center {
