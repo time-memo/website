@@ -1,8 +1,8 @@
 version: "3.3"
 
 services:
-  website-portfolio:
+  website:
     image: michalsimon/static-website:node14
     volumes:
-      - .:/www/
-    working_dir: /www
+      - .:/website/
+    working_dir: /website

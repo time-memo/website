@@ -1,11 +1,11 @@
 version: "3.3"
 
 services:
-  website-portfolio:
+  website:
     ports:
-      - 8000:8000
-      - 3001:3001
-      - 3013:3013
-      - 9229:9229
-    working_dir: /www
+      - "8000:8000"
+      - "3001:3001"
+      - "3013:3013"
+      - "9229:9229"
+    working_dir: /website
     command: /bin/bash -c "bundle install && npm install && npm start"
