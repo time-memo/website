@@ -164,7 +164,7 @@ const setDevelopmentEnvironment = (callback) => {
 
 const buildZip = () => {
 	return gulp.src('production/build/**/*')
-		.pipe(zip('ticha-website.zip'))
+		.pipe(zip('biteme-website.zip'))
 		.pipe(gulp.dest('production/release/'));
 };
 
