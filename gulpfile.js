@@ -94,6 +94,7 @@ const htmlmin = () => {
 			version: '@dev',
 			pageUrl: 'http://localhost:8000',
 			googleAnalytics: 'G-xxxxxxxxx',
+			gamescreenUrl: 'https://gamescreen.staging.startbite.me'
 		}));
 	}
 

@@ -1,21 +1,7 @@
 {% include 'components/header.njk' %}
 <div class="content content--light content--beveled" id="about">
     <div class="content__inner">
-        <div class="row text-center">
-            <div class="col-12 col-md-6">
-                <h2 class="content__heading">Let's play some snake!</h2>
-                <p>
-                    BiteMe is an online multiplayer snake game played on a shared screen</span>.
-                </p>
-                <p> 
-                    Enjoy some competitive fun with your friends by playing this all-time classic! Simply scan the QR code and control the snake on the screen using your phone.
-                </p>
-            </div>
-            <div class="col-12 col-md-6">
-                <img class="img-fluid d-none d-md-inline shadow-lg rounded-lg" src="../images/game.png" alt="game capture" width="500" height="425">
-                <img class="img-fluid d-md-none shadow rounded" src="../images/game.png" alt="game capture" width="340" height="298">
-            </div>
-        </div>
+        {% include 'components/about.njk' %}
     </div>
 </div>
 <div class="content content--bg content--beveled" id="rules">
