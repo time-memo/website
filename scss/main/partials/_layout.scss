@@ -25,3 +25,13 @@ body {
     }
   }
 }
+
+.img-responsive-width {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-responsive-height {
+  width: auto;
+  max-height: 100%;
+}
