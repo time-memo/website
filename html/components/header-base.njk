@@ -20,6 +20,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="manifest" href="/manifest.json">
     <title>{{ title }}</title>
 	<meta property="og:title" content="{{ title }}">
 	<meta name="twitter:title" content="{{ title }}">
@@ -39,10 +40,8 @@
 	<meta property="og:image" content="<%= pageUrl %>{{ image }}">
 	<meta name="twitter:image" content="<%= pageUrl %>{{ image }}">
 	<meta itemprop="image" content="<%= pageUrl %>{{ image }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/style-main.min.css?v<%= version %>">
-
     <meta name="theme-color" content="#000000">
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<% if (typeof(noRobots) !== "undefined" && noRobots) { %>

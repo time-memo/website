@@ -5,58 +5,53 @@
     "description": "Online share screen multiplayer snake game",
     "background_color": "#858585",
     "theme_color": "#0f880f",
-    "display": "browser",
+    "display": "standalone",
     "orientation": "landscape",
     "icons": [
     {
-      "src": "/android-icon-192x192-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-180x180-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "180x174"
     },
     {
-      "src": "/apple-icon-180x180-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-152x152-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "180x180"
+      "sizes": "152x147"
     },
     {
-      "src": "/apple-icon-152x152-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-144x144-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "152x152"
+      "sizes": "144x140"
     },
     {
-      "src": "/apple-icon-144x144-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-120x120-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "144x144"
+      "sizes": "120x116"
     },
     {
-      "src": "/apple-icon-120x120-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-114x114-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "120x120"
+      "sizes": "114x111"
     },
     {
-      "src": "/apple-icon-114x114-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-76x76-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "114x114"
+      "sizes": "76x74"
     },
     {
-      "src": "/apple-icon-76x76-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-72x72-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "76x76"
+      "sizes": "72x70"
     },
     {
-      "src": "/apple-icon-72x72-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-60x60-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "72x72"
+      "sizes": "60x58"
     },
     {
-      "src": "/apple-icon-60x60-seochecker-manifest-401.png",
+      "src": "/icon/apple-icon-57x57-seochecker-manifest-401.png",
       "type": "image/png",
-      "sizes": "60x60"
-    },
-    {
-      "src": "/apple-icon-57x57-seochecker-manifest-401.png",
-      "type": "image/png",
-      "sizes": "57x57"
+      "sizes": "57x55"
     }
   ],
   "prefer_related_applications": false
