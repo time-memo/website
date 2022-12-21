@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -21,15 +21,13 @@ jobs:
         run: docker-compose run website make -C production/ clean package
 
       - name: Store Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: biteme-website # double zipping issue: https://github.com/actions/upload-artifact/issues/39
           path: production/release/biteme-website.zip
 
       - name: Release
         run: make -C production/ release AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        env:
-          AWS_EC2_METADATA_DISABLED: "true" # https://github.com/actions/runner/issues/503
 
       - name: Deploy
         run: |
