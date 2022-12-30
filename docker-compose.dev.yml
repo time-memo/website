@@ -7,5 +7,6 @@ services:
       - "3001:3001"
       - "3013:3013"
       - "9229:9229"
+      - "9000:9000"  # storybook
     working_dir: /website
     command: /bin/bash -c "npm install && npm start"
