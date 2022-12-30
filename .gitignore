@@ -1,7 +1,6 @@
 node_modules/
 www/css/
 www/fonts/
-www/docs/
 www/*.html
 temp/
 log/
