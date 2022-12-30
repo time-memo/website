@@ -19,7 +19,6 @@
     "flow-bin": "^0.149.0",
     "gulp": "^4.0.2",
     "gulp-consolidate": "^0.2.0",
-    "gulp-hologram": "^1.2.3",
     "gulp-htmlmin": "^5.0.1",
     "gulp-nunjucks": "^5.1.0",
     "gulp-postcss": "^9.0.0",

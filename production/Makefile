@@ -17,11 +17,6 @@ clean:
 		rm -rf $(build)
 		rm -rf $(release)
 
-.PHONY: bundler
-bundler:
-	@(printf "${BG}Installing Ruby dependencies${NC}")
-		cd $(root_project) && bundle install
-
 .PHONY: npm
 npm:
 	@(printf "${BG}Installing NPM dependencies${NC}")

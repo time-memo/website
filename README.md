@@ -14,7 +14,6 @@ The site is running on AWS. The whole deployment is automated by CI/CD pipeline 
 
 ## Requirements
  - NodeJS 12.10+
- - Ruby 2.5+
 
 
 ## Installation & Run

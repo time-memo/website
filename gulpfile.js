@@ -9,7 +9,6 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const rename = require('gulp-rename');
 const named = require('vinyl-named');
-const gulpHologram = require('gulp-hologram');
 const gulpHtmlmin = require('gulp-htmlmin');
 const gulpNunjucks = require('gulp-nunjucks');
 const yargs = require('yargs');
@@ -125,15 +124,6 @@ const transpile = () => {
 
 const js = transpile;
 
-// Documentation
-const hologram = () => {
-	return gulp.src('docs/hologram/config.yml')
-		.pipe(gulpHologram({
-			bundler: true,
-			logging: true,
-		}));
-};
-
 const server = () => {
 	return browserSync.init({
 		open: false,
@@ -150,7 +140,7 @@ const watch = (callback) => {
 		interval: 500,
 		usePolling: true,
 	};
-	gulp.watch(['scss/**/*.scss'], watchConfig, gulp.parallel(css, hologram));
+	gulp.watch(['scss/**/*.scss'], watchConfig, gulp.task(css));
 	gulp.watch(['html/**/*.njk'], watchConfig, html);
 	gulp.watch(['scripts/**/*.js'], watchConfig, js);
 
@@ -169,7 +159,7 @@ const buildZip = () => {
 };
 
 
-const production = gulp.series(gulp.parallel(css, js, html), hologram);
+const production = gulp.parallel(css, js, html);
 
 const defaultTask = gulp.series(setDevelopmentEnvironment, production, gulp.parallel(watch, server));
 
