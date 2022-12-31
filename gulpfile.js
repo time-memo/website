@@ -140,7 +140,7 @@ const watch = (callback) => {
 		interval: 500,
 		usePolling: true,
 	};
-	gulp.watch(['scss/**/*.scss'], watchConfig, gulp.task(css));
+	gulp.watch(['scss/**/*.scss'], watchConfig, css);
 	gulp.watch(['html/**/*.njk'], watchConfig, html);
 	gulp.watch(['scripts/**/*.js'], watchConfig, js);
 
