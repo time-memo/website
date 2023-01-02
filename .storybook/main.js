@@ -9,6 +9,10 @@ module.exports = {
     {
       from: "../www/css",
       to: "/css"
+    },
+      {
+      from: "../www/images",
+      to: "/images"
     }
   ],
   logLevel: "debug"
