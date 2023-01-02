@@ -6,5 +6,7 @@
 # 3. A robot must protect its own existence as long as such protection does
 #    not conflict with the First or Second Law.
 
+# https://stackoverflow.com/questions/4276957/how-to-configure-robots-txt-to-allow-everything
+
 User-agent: *
 <% if (typeof(noRobots) !== "undefined" && noRobots) { %>Disallow: /<% } else { %>Allow: /<% } %>
