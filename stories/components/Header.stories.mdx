@@ -3,23 +3,23 @@ import {Canvas, Meta, Story, ArgsTable} from '@storybook/addon-docs';
 
 <Meta title="Components/Header"/>
 
-export const Template = ({size}) => {
+export const HeaderExpanded = () => {
     return `<header class="header header--fixed">
     <div class="container custom-font">
         <div class="row justify-content-md-between">
             <div class="col-12 col-md-4">
-                <a class="header__logo" href="/#">
+                <a class="header__logo" href="">
                     <img src="/images/logo.png" alt="logo" height="50">
                 </a>
             </div>
             <div class="col-12 col-md-auto">
                 <div class="menu__collapse" id="main-menu">
                     <ul class="menu menu--horizontal">
-                        <li class="menu__item"><a href="#about">About</a></li>
-                        <li class="menu__item"><a href="#how-to-play">How to play</a></li>
-                        <li class="menu__item"><a href="#video">Video</a></li>
-                        <li class="menu__item"><a href="#contacts">Contacts</a></li>
-                        <li class="menu__item"><button class="play-button--small" onclick="location.href = '<%= gamescreenUrl %>';">Start game</button></li>
+                        <li class="menu__item"><a href="">About</a></li>
+                        <li class="menu__item"><a href="">How to play</a></li>
+                        <li class="menu__item"><a href="">Video</a></li>
+                        <li class="menu__item"><a href="">Contacts</a></li>
+                        <li class="menu__item"><button class="play-button--small">Start game</button></li>
                     </ul>
                 </div>
             </div>
@@ -28,12 +28,41 @@ export const Template = ({size}) => {
 </header>`
 }
 
+export const HeaderCollapsed = () => {
+    return `<header class="header header--fixed">
+    <div class="container custom-font">
+        <div class="row justify-content-md-between">
+            <div class="col-12 col-md-4">
+                <a class="header__logo" href="">
+                    <img src="/images/logo.png" alt="logo" height="50">
+                </a>
+                <a class="menu__toggler menu__toggler--sticked d-md-none" id="main-menu-toggler" href="#"
+                data-target="#main-menu" aria-controls="main-menu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                    <span class="toggler__icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>`
+}
+
 # Header and navigation
 
+The header is mobile friendly and will collapse when on smaller screens.
+
+## Expanded
 
 <Canvas>
-    <Story name="Header">
-        {Template.bind({})}
+    <Story name="Header expanded">
+        {HeaderExpanded.bind({})}
     </Story>
 </Canvas>
 
+## Collapsed
+
+<Canvas>
+    <Story name="Header collapsed">
+        {HeaderCollapsed.bind({})}
+    </Story>
+</Canvas>
