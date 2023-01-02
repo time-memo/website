@@ -1,0 +1,31 @@
+.colors-block {
+  display: flex;
+  padding: 2rem;
+}
+
+%color {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.color--primary {
+  @extend %color;
+  color: white;
+  background-color: theme-color("primary");
+}
+
+.color--secondary {
+  @extend %color;
+  color: white;
+  background-color: theme-color("secondary");
+}
+
+.color--background {
+  @extend %color;
+  color: black;
+  background-color: $color-background;
+}

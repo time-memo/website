@@ -1,0 +1,18 @@
+import {Canvas, Meta, Story, ArgsTable} from '@storybook/addon-docs';
+
+
+<Meta title="Components/Header"/>
+
+export const Template = ({size}) => {
+    return `<h2>Hello</h2>`
+}
+
+# Header
+
+
+<Canvas>
+    <Story name="Header">
+        {Template.bind({})}
+    </Story>
+</Canvas>
+

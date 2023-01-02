@@ -1,17 +1,46 @@
-import { Meta, Description } from '@storybook/addon-docs';
+
+import { Meta, Story } from '@storybook/addon-docs';
 
 <Meta title="Introduction" />
 
+export const FontTemplate = () => {
+    return `<div class="custom-font">The quick brown fox jumps over the lazy dog.</div>`
+}
+
+export const ColorTemplate = () => {
+    return `
+<div class="colors-block">
+        <div class="color--primary custom-font">Primary</div>
+        <div class="color--secondary custom-font">Secondary</div>
+        <div class="color--background custom-font">Background</div>
+</div>
+`
+}
 
 # Welcome to Bite Me Design Style Guide!
 
 ## Framework
+- Bootstrap: v4.5
 
 ## Font
+As this is a game, the font should be playful. That is why the handwritten style was chosen.
 
-## Colours
+- Name: Atma
+- Google fonts: [link](https://fonts.google.com/specimen/Atma)
 
-## Elements
+<Story name="Font">
+    {FontTemplate.bind({})}
+</Story>
+
+
+## Colors
+<Story name="Color">
+    {ColorTemplate.bind({})}
+</Story>
+
+
+
+## Components
 
 - Navbar
 - Buttons
