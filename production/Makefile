@@ -23,7 +23,7 @@ npm:
 		cd $(root_project) && npm install
 
 .PHONY: app
-app: npm bundler
+app: npm
 	@(printf "${BG}Preparing build directory${NC}")
 		mkdir -p $(build)
 		mkdir -p $(release)
