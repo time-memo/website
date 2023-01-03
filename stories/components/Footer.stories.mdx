@@ -1,0 +1,44 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs';
+
+
+<Meta title="Components/Footer"/>
+
+export const FooterTemplate = () => {
+    return `<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 pb-4">
+                <img src="/images/logo.png" alt="logo" height="60px">
+            </div>
+            <div class="col-12 col-md-4">
+                <h5>Menu</h5>
+                <ul class="menu menu--footer">
+                    <li class="menu__item"><a href="">About</a></li>
+                    <li class="menu__item"><a href="">How to play</a></li>
+                    <li class="menu__item"><a href="">Video</a></li>
+                    <li class="menu__item"><a href="">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <h5>Get in touch</h5>
+                <ul class="menu menu--footer">
+                    <li class="menu__item"><a href="">info@startbite.me</a>
+                    <li class="menu__item"><a href="" target="">Github</a>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__copyright">
+            This site was created by tinazhouhui &copy; 2022
+        </p>
+    </div>
+</footer>`
+}
+
+
+# Footer
+
+<Canvas>
+    <Story name="Footer">
+        {FooterTemplate.bind({})}
+    </Story>
+</Canvas>
