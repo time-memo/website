@@ -11,7 +11,7 @@
 {% set description = pageDescription if pageDescription is defined else pageDescriptionMain %}
 {% set keywords = pageKeywords if pageKeywords is defined else pageKeywordsMain %}
 
-{% set image = pageImage if pageImage is defined else '/images/cover.jpg' %}
+{% set image = pageImage if pageImage is defined else '/images/logo.png' %}
 {% set imageWidth = pageImageWidth if pageImageWidth is defined else 2900 %}
 {% set imageHeight = pageImageHeight if pageImageHeight is defined else 1500 %}
 
@@ -27,13 +27,14 @@
     <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="{{ keywords }}">
-	<meta name="apple-mobile-web-app-title" content="BiteMe - Online Multiplayer Snake">
-	<meta name="author" content="Tina Zhou">
-	<meta name="twitter:site" content="BiteMe - Online Multiplayer Snake">
-	<meta name="application-name" content="BiteMe - Online Multiplayer Snake">
-	<meta property="og:site_name" content="BiteMe - Online Multiplayer Snake">
+	<meta name="apple-mobile-web-app-title" content="{{ title }}">
+	<meta name="author" content="Tina Zhou Hui">
+	<meta name="twitter:site" content="{{ title }}">
+	<meta name="application-name" content="{{ title }}">
+	<meta property="og:site_name" content="{{ title }}">
 	<meta property="og:type" content="service">
 	<meta name="twitter:card" content="summary_large_image">
+	<meta property="og:url"content="<%= pageUrl %>}" />
 
 	<meta property="og:image:width" content="{{ imageWidth }}">
 	<meta property="og:image:height" content="{{ imageHeight }}">
