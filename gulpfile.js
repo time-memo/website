@@ -65,17 +65,6 @@ const nunjucks = () => {
 					height: 480,
 				},
 			},
-			getNextObjectKey: (database, key) => {
-				const keys = Object.keys(database);
-				const index = keys.indexOf(key);
-
-				if (index + 1 < keys.length) {
-					return keys[index + 1];
-				} else {
-					return null;
-				}
-			},
-			year: new Date().getFullYear(),
 		}))
 		.pipe(rename({extname: '.html'}))
 		.pipe(gulp.dest('temp/html/'));
@@ -93,7 +82,6 @@ const htmlmin = () => {
 			version: '@dev',
 			pageUrl: 'http://localhost:8000',
 			googleAnalytics: 'G-xxxxxxxxx',
-			gamescreenUrl: 'https://gamescreen.staging.startbite.me'
 		}));
 	}
 
@@ -154,7 +142,7 @@ const setDevelopmentEnvironment = (callback) => {
 
 const buildZip = () => {
 	return gulp.src('production/build/**/*')
-		.pipe(zip('biteme-website.zip'))
+		.pipe(zip('timemo-website.zip'))
 		.pipe(gulp.dest('production/release/'));
 };
 

@@ -9,3 +9,6 @@ www/js/
 www/clients/*.html
 
 .idea
+
+/production/*
+!/production/Makefile
