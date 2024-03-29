@@ -1,13 +1,14 @@
 @import '../../node_modules/bootstrap/scss/functions';
 
 $theme-colors: (
-        primary: #0f880f,
-        secondary: #60aa40,
-        basic: #fff,
+        primary: #fdb719,
+        secondary: #003046,
+        background: #ffead8,
+        "orange": #fc8516,
 );
 
 $color-black: #000;
-$color-background: lighten(theme-color('secondary'), 20);
+$color-background: lighten(theme-color('primary'), 20);
 $color-white: #fff;
 $color-portfolio: rgba(0, 0, 0, .6);
 

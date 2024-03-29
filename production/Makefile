@@ -2,6 +2,7 @@
 root_project = ..
 build = "$(root_project)/production/build"
 release = "$(root_project)/production/release"
+app_name = "timemo"
 
 BG =\n\033[0;36m-- # Beginning
 NC =\033[0m\n# No Color
@@ -49,12 +50,12 @@ package: app
 .PHONY: release
 release:
 	@(printf "${BG}Upload package to S3 repository${NC}")
-		aws s3 cp $(release)/latest.version "s3://biteme-release/dev/biteme-website.version";
-		aws s3 cp $(release)/biteme-website.zip "s3://biteme-release/dev/biteme-website.zip";
-		aws s3 cp $(release)/biteme-website.zip "s3://biteme-release/dev/biteme-website-$(version).zip";
+		aws s3 cp $(release)/latest.version "s3://$(app_name)-release/dev/$(app_name)-website.version";
+		aws s3 cp $(release)/$(app_name)-website.zip "s3://$(app_name)-release/dev/$(app_name)-website.zip";
+		aws s3 cp $(release)/$(app_name)-website.zip "s3://$(app_name)-release/dev/$(app_name)-website-$(version).zip";
 
 		if [ `echo ${version} | egrep "^v[0-9]+(+\.[0-9]+){2}$$"` ]; then \
-			aws s3 cp $(release)/latest.version "s3://biteme-release/stable/biteme-website.version"; \
-			aws s3 cp $(release)/biteme-website.zip "s3://biteme-release/stable/biteme-website.zip"; \
-			aws s3 cp $(release)/biteme-website.zip "s3://biteme-release/stable/biteme-website-$(version).zip"; \
+			aws s3 cp $(release)/latest.version "s3://$(app_name)-release/stable/$(app_name)-website.version"; \
+			aws s3 cp $(release)/$(app_name)-website.zip "s3://$(app_name)-release/stable/$(app_name)-website.zip"; \
+			aws s3 cp $(release)/$(app_name)-website.zip "s3://$(app_name)-release/stable/$(app_name)-website-$(version).zip"; \
 		fi

@@ -23,6 +23,7 @@
   @extend %play-button;
   padding: 1rem;
   margin: 0.5rem;
+  background-color: theme-color("orange");
 
   &:hover {
     cursor: pointer;

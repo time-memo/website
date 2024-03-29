@@ -1,6 +1,6 @@
-Biteme Landing page
+Timemo Landing page
 --------
-A basic landing page for Biteme
+A basic landing page for Timemo
 
 ## Technologies
 
@@ -10,7 +10,7 @@ Templating done through `nunjucks`.
 The site is running on AWS. The whole deployment is automated by CI/CD pipeline in GitHub Actions.
 
 ## Requirements
- - NodeJS 14
+ - NodeJS 16
 
 
 ## Installation & Run

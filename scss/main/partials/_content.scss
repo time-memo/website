@@ -139,24 +139,24 @@ The other variant with color backgroung which is used on the page.
   }
 
   &--dark {
-    background: theme-color('primary');
-    color: $color-black;
+    background: theme-color('secondary');
+    color: $color-white;
 
     &::before {
-      background-image: linear-gradient(to right top, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
+      background-image: linear-gradient(to right top, theme-color('secondary') 0%, theme-color('secondary') 50%, $almost-transparent 51%);
     }
 
     &::after {
-      background-image: linear-gradient(to left bottom, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
+      background-image: linear-gradient(to left bottom, theme-color('secondary') 0%, theme-color('secondary') 50%, $almost-transparent 51%);
     }
 
     &.content--beveled-reverse {
       &::before {
-        background-image: linear-gradient(to left top, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
+        background-image: linear-gradient(to left top, theme-color('secondary') 0%, theme-color('secondary') 50%, $almost-transparent 51%);
       }
 
       &::after {
-        background-image: linear-gradient(to right bottom, theme-color('primary') 0%, theme-color('primary') 50%, $almost-transparent 51%);
+        background-image: linear-gradient(to right bottom, theme-color('secondary') 0%, theme-color('secondary') 50%, $almost-transparent 51%);
       }
     }
   }
@@ -191,7 +191,7 @@ The other variant with color backgroung which is used on the page.
       font-weight: 500;
 
       a {
-        color: $color-black;
+        color: $color-white;
         text-decoration: underline;
       }
 
