@@ -16,7 +16,7 @@ navigation is great for mentioning authors or other useful information that are 
 
 .header {
   background-color: theme-color('primary');
-  border-bottom: .0625rem solid $gray-500;
+  border-bottom: .1rem solid theme-color('orange');
   color: theme-color('primary');
   display: flex;
   left: 0;
@@ -31,10 +31,6 @@ navigation is great for mentioning authors or other useful information that are 
   &__logo {
     display: block;
     margin: auto;
-    padding-top: 1rem;
-
-    @include media-breakpoint-up(md) {
-      margin: 0;
-    }
+    padding: 1rem 0;
   }
 }
