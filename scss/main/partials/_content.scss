@@ -118,6 +118,7 @@ The other variant with color backgroung which is used on the page.
 
   &--bg {
     background: $color-background;
+    color: theme-color("secondary");
 
     &::before {
       background-image: linear-gradient(to right top, $color-background 0%, $color-background 50%, $almost-transparent 51%);
