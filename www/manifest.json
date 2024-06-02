@@ -1,8 +1,8 @@
 {
-    "short_name": "BiteMe",
-    "name": "BiteMe - Multiplayer Snake",
+    "short_name": "Timemo",
+    "name": "Timemo - Send memo to your future self",
     "lang": "en",
-    "description": "Online share screen multiplayer snake game",
+    "description": "Timemo is a time vault allowing you to send memos to your future self",
     "background_color": "#858585",
     "theme_color": "#0f880f",
     "display": "standalone",
