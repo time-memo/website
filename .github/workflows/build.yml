@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v4
 
       - name: Build Image
         run: docker-compose up -d
@@ -21,7 +19,7 @@ jobs:
         run: docker-compose run website make -C production/ clean package
 
       - name: Store Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: timemo-website # double zipping issue: https://github.com/actions/upload-artifact/issues/39
           path: production/release/timemo-website.zip
